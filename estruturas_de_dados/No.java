@@ -2,11 +2,11 @@ package estruturas_de_dados;
 
 public class No {
 
-    private final short valor;
-    private No proximo;
-    private No anterior;
+    private final short valor;  // conteúdo do nó
+    private No proximo;  // ligação estrutural
+    private No anterior;  // ligação estrutural
 
-    public No(short valor) {
+    public No(short valor) { // Construtor
         this.valor = valor;
         this.proximo = null;
         this.anterior = null;
@@ -33,3 +33,4 @@ public class No {
     }
 
 }
+
