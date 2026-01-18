@@ -2,7 +2,7 @@ package estruturas_de_dados;
 
 public class ListaEncadeadaSimples {
 
-    private No primeiro; // ligação estrutural HEAD
+    private No primeiro; // ligação estrutural (HEAD da lista)
 
     public ListaEncadeadaSimples() { 
         this.primeiro = null;
@@ -14,8 +14,8 @@ public class ListaEncadeadaSimples {
     public void inserirInicio(short valor) {
 
         No novo = new No(valor);
-        novo.setProximo(primeiro);
-        primeiro = novo;
+        novo.setProximo(primeiro); // O valor de "proximo" passa de "null" para o antigo "primeiro"
+        primeiro = novo; // A variável primeiro (head) passa a apontar para novo
     }
 
     /* =========================
@@ -160,4 +160,5 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
