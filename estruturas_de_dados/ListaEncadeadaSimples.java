@@ -2,9 +2,9 @@ package estruturas_de_dados;
 
 public class ListaEncadeadaSimples {
 
-    private No primeiro;
+    private No primeiro; // ligação estrutural HEAD
 
-    public ListaEncadeadaSimples() {
+    public ListaEncadeadaSimples() { 
         this.primeiro = null;
     }
 
@@ -160,3 +160,4 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
