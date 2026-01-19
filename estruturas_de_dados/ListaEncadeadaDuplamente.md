@@ -20,7 +20,7 @@ Ela resolve uma limitação direta da lista simples:
 
 ---
 
-## 🧱 Estrutura básica da lista
+# 🧱 Estrutura básica da lista
 
 ### 🔹 Nó (classe `No`)
 
@@ -35,4 +35,34 @@ Representação conceitual:
 ```text
 [ anterior | valor | proximo ]
 ````
+Aspectos técnicos:
 
+- valor representa informação.
+- proximo e anterior representam ligações estruturais, não dados.
+- A lista é construída exclusivamente por essas referências.
+
+
+# 🧠 Conceito central: relacionamento bidirecional
+
+Representação de uma lista duplamente encadeada:
+```text
+null ← [10] ⇄ [20] ⇄ [30] → null
+````
+Condições de borda:
+- Primeiro nó: anterior == null
+- Último nó: proximo == null
+
+# 🗣️ Cabeças da lista
+
+O código mantém duas referências externas:
+```java
+private No primeiro;
+private No ultimo;
+````
+
+Funções:
+primeiro → ponto de entrada da lista
+ultimo → ponto de saída da lista
+
+Observação crítica:
+- "primeiro" e "ultimo" não são nós, apenas referências.
