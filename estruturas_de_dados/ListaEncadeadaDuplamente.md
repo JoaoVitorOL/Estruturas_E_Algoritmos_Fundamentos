@@ -81,7 +81,9 @@ Inserir um novo nó antes do atual primeiro.
 
 2. Se a lista estiver vazia:
    - ultimo também aponta para o novo nó <br>
+   
 Caso contrário:
+
    - O antigo primeiro aponta de volta para o novo
    - O novo aponta para o antigo primeiro
 
@@ -92,3 +94,24 @@ Fluxo estrutural:
 novo ⇄ antigoPrimeiro
 primeiro → novo
 ````
+
+
+# ➕ Inserir no final
+
+![Lista dupla inserir](../assets/duplainserirfinal.png)
+
+## Objetivo
+Adicionar um novo nó após o atual ultimo.
+
+## Execução lógica
+
+1. Criar novo nó
+
+2. Se lista vazia:
+   - primeiro aponta para ele <br>
+
+Caso contrário:
+  - Antigo último aponta para o novo
+  - Novo aponta de volta para o antigo último
+
+3. Atualizar ultimo
