@@ -28,8 +28,8 @@ Representação conceitual:
 [ valor | próximo ]
 ````
 Aspectos técnicos importantes:
-  1. Valor representa informação.
-  2. "Próximo" representa uma ligação estrutural, não um dado.
+  1. Valor representa informação. <br>
+  2. "Próximo" representa uma ligação estrutural, não um dado. <br>
 
 
 O último nó da lista sempre possui:
@@ -89,9 +89,9 @@ Todas funcionam exclusivamente por manipulação de referências, nunca por índ
 ⚫ Adicionar um novo nó como primeiro elemento da lista. <br>
 
 ## Procedimento lógico
-1. Criar um novo nó.
-2. Fazer o novo nó apontar para o antigo primeiro nó.
-3. Atualizar o head da lista para o novo nó.
+1. Criar um novo nó.  <br>
+2. Fazer o novo nó apontar para o antigo primeiro nó.  <br>
+3. Atualizar o head da lista para o novo nó. <br>
 
 ```text
 novo → antigoPrimeiro
@@ -109,9 +109,9 @@ O(1), Independe do tamanho da lista.
 
 ## Procedimento lógico
 
-1  Guardar o nó atualmente apontado por primeiro.
-2. Fazer "primeiro" apontar para o segundo nó.
-3. Retornar o nó removido.
+1  Guardar o nó atualmente apontado por primeiro. <br>
+2. Fazer "primeiro" apontar para o segundo nó. <br>
+3. Retornar o nó removido. <br>
 
 # Observação técnica
 O nó "removido", apenas perde sua ligação com a lista.
@@ -121,9 +121,9 @@ O nó "removido", apenas perde sua ligação com a lista.
 
 ## Funcionamento
 
-1. Começa pelo nó apontado por "primeiro".
-2. Percorre a lista utilizando "proximo".
-3. Encerra ao encontrar null.
+1. Começa pelo nó apontado por "primeiro". <br>
+2. Percorre a lista utilizando "proximo". <br>
+3. Encerra ao encontrar null. <br>
 
 ```text
 atual = primeiro
@@ -136,8 +136,8 @@ O(n), onde n é o número de nós da lista
 
 ## Funcionamento
 
-1. Percorre a lista sequencialmente
-2. Compara o valor de cada nó
+1. Percorre a lista sequencialmente <br>
+2. Compara o valor de cada nó <br>
 
 ## Finaliza quando:
 o valor é encontrado, ou o final da lista é alcançado (null)
@@ -163,8 +163,8 @@ anterior → nó imediatamente anterior <br>
 
 ## Procedimento lógico
 
-1. Localizar o nó desejado.
-2. Fazer o nó anterior apontar para o próximo do nó removido.
+1. Localizar o nó desejado. <br>
+2. Fazer o nó anterior apontar para o próximo do nó removido. <br>
 
 ```text
 anterior → atual → proximo
