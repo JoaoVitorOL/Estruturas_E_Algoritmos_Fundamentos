@@ -92,7 +92,7 @@ Caso contrário:
 Fluxo estrutural:
 ```text
 novo ⇄ antigoPrimeiro
-primeiro → novo
+primeiro(Head) → novo
 ````
 
 
@@ -115,3 +115,116 @@ Caso contrário:
   - Novo aponta de volta para o antigo último
 
 3. Atualizar ultimo
+
+# ➖ Excluir do início
+![Lista dupla excluir inicio](../assets/duplaexcluirinicio.png)
+
+## Objetivo
+Remover o nó apontado por primeiro (Head).
+
+## Execução lógica
+
+1. Guardar o nó removido
+
+2. Se havia apenas um nó:
+   - ultimo = null <br>
+
+Caso contrário:
+   - O segundo nó perde referência para trás
+
+4. Atualizar "primeiro"
+
+5. Isolar o nó removido
+
+Conceito importante
+> O nó não é apagado — ele apenas perde as referências da lista.
+
+# ➖ Excluir do final
+
+![Lista dupla excluir final](../assets/duplaexcluirfinal.png)
+
+## Objetivo
+
+Remover o nó apontado por ultimo (tail).
+
+## Execução lógica
+
+1. Guardar o nó removido
+
+2. Se havia apenas um nó:
+   - primeiro = null <br>
+
+Caso contrário:
+  - O penúltimo perde referência para frente
+
+3. Atualizar ultimo
+
+4. Isolar o nó removido
+
+# ❌ Excluir qualquer valor
+![Lista dupla excluir qualquer](../assets/duplaexcluirqualquer.png)
+
+## Objetivo
+Remover um nó intermediário sem necessidade de ponteiro auxiliar externo.
+
+
+1. Percorrer a lista até encontrar o valor
+
+2. Caso não encontre, retornar null
+
+3. Se for o primeiro:
+   - Atualizar primeiro <br>
+
+Caso contrário:
+  - Ligar anterior ao proximo
+
+4. Se for o último:
+   - Atualizar ultimo <br>
+
+Caso contrário: 
+   - Ajustar o anterior do próximo nó
+
+5. Isolar o nó removido
+
+Vantagem estrutural
+> O próprio nó conhece quem vem antes e depois.
+
+# 🔍 Mostrar do início
+
+![Lista dupla](../assets/listadupla.png)
+
+Percorre a lista usando "proximo".
+
+## 🔍 Mostrar do final
+Percorre a lista usando "anterior".
+
+
+# 🔎 Pesquisar valor
+
+Funcionamento:
+
+- Percorre a lista do início
+
+- Compara valores
+
+- Retorna o nó ou null
+
+Observação:
+Mesmo com lista dupla, a busca continua sequencial.
+
+## 🔗 Relação com outras estruturas
+
+A lista duplamente encadeada é base direta para:
+
+- Deques
+
+- LRU Cache
+
+- Navegação undo/redo
+
+- Gerenciadores de histórico
+
+- Estruturas de sistemas operacionais
+
+
+
