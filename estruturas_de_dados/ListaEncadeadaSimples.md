@@ -146,7 +146,7 @@ Remover o primeiro nó da lista.
 
 ## 🔍 Mostrar lista
 
-![Mostrar lista](sandbox:/mnt/data/lista_encadeada_imagens/page_9_img_1.png)
+![Mostrar lista](../assets/listaencadeada.png)
 
 ### Funcionamento
 
