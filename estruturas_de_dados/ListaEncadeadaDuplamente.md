@@ -65,4 +65,27 @@ primeiro → ponto de entrada da lista
 ultimo → ponto de saída da lista
 
 Observação crítica:
-- "primeiro" e "ultimo" não são nós, apenas referências.
+> "primeiro" e "ultimo" não são nós, apenas referências.
+
+# ➕ Inserir no início
+
+## Objetivo
+Inserir um novo nó antes do atual primeiro.
+
+## Execução lógica
+
+1. Criar o novo nó
+
+2. Se a lista estiver vazia:
+   - ultimo também aponta para o novo nó
+Caso contrário:
+   - O antigo primeiro aponta de volta para o novo
+   - O novo aponta para o antigo primeiro
+
+3. Atualizar primeiro
+
+Fluxo estrutural:
+```text
+novo ⇄ antigoPrimeiro
+primeiro → novo
+````
