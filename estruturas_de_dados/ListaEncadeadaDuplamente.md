@@ -69,6 +69,9 @@ Observação crítica:
 
 # ➕ Inserir no início
 
+![Lista dupla inserir](../assets/duplainseririnicio.png)
+
+
 ## Objetivo
 Inserir um novo nó antes do atual primeiro.
 
@@ -77,7 +80,7 @@ Inserir um novo nó antes do atual primeiro.
 1. Criar o novo nó
 
 2. Se a lista estiver vazia:
-   - ultimo também aponta para o novo nó
+   - ultimo também aponta para o novo nó <br>
 Caso contrário:
    - O antigo primeiro aponta de volta para o novo
    - O novo aponta para o antigo primeiro
