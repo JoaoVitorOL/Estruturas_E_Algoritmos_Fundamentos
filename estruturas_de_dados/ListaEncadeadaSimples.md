@@ -1,8 +1,8 @@
 # 📦 Lista Encadeada Simples (PT-BR)
+![Construção da lista](../assets/encadeadaconstruir.png)
 
 ## 🎯 Função principal
 
-![Construção da lista](../assets/encadeadaconstruir.png)
 
 A **Lista Encadeada Simples** é uma **estrutura de dados linear e dinâmica**, utilizada para armazenar elementos de forma sequencial **sem uso de posições fixas de memória**, diferentemente de vetores (arrays).
 
@@ -38,17 +38,17 @@ proximo == null , indicando o fim da lista.
 ## 🧠 Conceito central: posição × relacionamento
 # Vetor (array) 
 
-⚫ Cada elemento ocupa uma posição fixa na memória. 
-⚫ O acesso é feito por índice.
+⚫ Cada elemento ocupa uma posição fixa na memória. <br>
+⚫ O acesso é feito por índice. <br>
 
 ```text
 arr[0] arr[1] arr[2]
 ````
 # Lista Encadeada
 
-⚫ Os elementos não possuem posição fixa.
-⚫ Cada nó conhece apenas o próximo.
-⚫ O acesso ocorre por relacionamento entre nós.
+⚫ Os elementos não possuem posição fixa. <br>
+⚫ Cada nó conhece apenas o próximo. <br>
+⚫ O acesso ocorre por relacionamento entre nós. <br>
 
 ```text
 primeiro → nó1 → nó2 → nó3 → null
@@ -65,20 +65,20 @@ private No primeiro;
 ````
 
 Funções dessa referência:
-⚫ Apontar para o primeiro nó da lista.
-⚫ Servir como ponto de entrada para todas as operações.
+⚫ Apontar para o primeiro nó da lista. <br>
+⚫ Servir como ponto de entrada para todas as operações. <br>
 
 Observações importantes:
-⚫ "primeiro" não é um nó.
-⚫ É apenas uma referência externa mantida pela estrutura da lista.
+⚫ "primeiro" não é um nó. <br>
+⚫ É apenas uma referência externa mantida pela estrutura da lista. <br>
 
 ## ⚙️ Operações fundamentais
 A lista encadeada simples implementa as seguintes operações:
-⚫ Inserir no início
-⚫ Excluir do início
-⚫ Mostrar lista
-⚫ Pesquisar valor
-⚫ Excluir em qualquer posição
+⚫ Inserir no início <br>
+⚫ Excluir do início <br>
+⚫ Mostrar lista <br>
+⚫ Pesquisar valor <br>
+⚫ Excluir em qualquer posição <br>
 Todas funcionam exclusivamente por manipulação de referências, nunca por índices.
 
 ## ➕ Inserir no início
@@ -86,7 +86,7 @@ Todas funcionam exclusivamente por manipulação de referências, nunca por índ
 ![Inserir Início](../assets/encadeadainseririnicio.png)
 
 # Objetivo
-⚫ Adicionar um novo nó como primeiro elemento da lista.
+⚫ Adicionar um novo nó como primeiro elemento da lista. <br>
 
 # Procedimento lógico
 1. Criar um novo nó.
@@ -105,7 +105,7 @@ O(1), Independe do tamanho da lista.
 ![Excluir Início](../assets/encadeadaexcluirinicio.png)
 
 # Objetivo
-⚫ Remover o primeiro nó da lista.
+⚫ Remover o primeiro nó da lista. <br>
 
 # Procedimento lógico
 
@@ -143,8 +143,8 @@ O(n), onde n é o número de nós da lista
 o valor é encontrado, ou o final da lista é alcançado (null)
 
 Observação importante
-⚫ Não existe atalho.
-⚫ Mesmo listas ordenadas exigem percurso sequencial.
+⚫ Não existe atalho. <br>
+⚫ Mesmo listas ordenadas exigem percurso sequencial. <br>
 
 ## ❌ Excluir em qualquer posição
 
@@ -177,18 +177,18 @@ anterior → proximo
 
 ##  📌 Características finais da lista encadeada simples
 
-⚫ Estrutura dinâmica
-⚫ Uso intensivo de referências
-⚫ Inserções e remoções eficientes no início
-⚫ Percurso sempre sequencial
-⚫ Não utiliza índices
+⚫ Estrutura dinâmica <br>
+⚫ Uso intensivo de referências <br>
+⚫ Inserções e remoções eficientes no início <br>
+⚫ Percurso sempre sequencial <br>
+⚫ Não utiliza índices <br>
 
 A lista encadeada simples é a base conceitual para:
 
-⚫ Listas duplamente encadeadas
-⚫ Pilhas
-⚫ Filas
-⚫ Árvores
-⚫ Grafos
+⚫ Listas duplamente encadeadas <br>
+⚫ Pilhas <br>
+⚫ Filas <br>
+⚫ Árvores <br>
+⚫ Grafos <br>
 
 
