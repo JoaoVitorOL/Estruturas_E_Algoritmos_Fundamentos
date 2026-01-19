@@ -2,6 +2,8 @@
 
 ## 🎯 Função principal
 
+![Inserção no início](../assets/encadeadaconstruir.png)
+
 A **Lista Encadeada Simples** é uma **estrutura de dados linear e dinâmica**, utilizada para armazenar elementos de forma sequencial **sem uso de posições fixas de memória**, diferentemente de vetores (arrays).
 
 A lista é formada por **nós**, e cada nó conhece apenas o **próximo nó da sequência**. O acesso à lista ocorre exclusivamente por meio de uma referência inicial chamada **primeiro** ou **head**.
