@@ -64,17 +64,17 @@ public class ListaEncadeadaDuplamente {
             return null;
         }
 
-        No temp = primeiro;
+        No temp = primeiro; // Nó a ser removido
 
-        if (primeiro.getProximo() == null) {
-            ultimo = null;
+        if (primeiro.getProximo() == null) { //“O primeiro nó é também o último?”
+            ultimo = null; // faz com que: primeiro -> null | ultimo -> null
         } else {
-            primeiro.getProximo().setAnterior(null);
+            primeiro.getProximo().setAnterior(null); // Remove a ligação de trás do novo primeiro nó
         }
 
-        primeiro = primeiro.getProximo();
+        primeiro = primeiro.getProximo(); // Move o head 
 
-        temp.setProximo(null);
+        temp.setProximo(null); // Desconectadndo o ponteiros do nó removido
         temp.setAnterior(null);
 
         return temp;
@@ -121,13 +121,13 @@ public class ListaEncadeadaDuplamente {
             return null;
         }
 
-        if (atual == primeiro) {
+        if (atual == primeiro) { // 🔹 Caso 1: o nó é o primeiro
             primeiro = atual.getProximo();
         } else {
-            atual.getAnterior().setProximo(atual.getProximo());
+            atual.getAnterior().setProximo(atual.getProximo());  // Remove o nó atual do encadeamento, conectando diretamente o nó anterior ao nó seguinte.
         }
 
-        if (atual == ultimo) {
+        if (atual == ultimo) { // 🔹 Caso 2: o nó está no meio ou no fim
             ultimo = atual.getAnterior();
         } else {
             atual.getProximo().setAnterior(atual.getAnterior());
@@ -290,4 +290,5 @@ public class ListaEncadeadaDuplamente {
     }
 
 }
+
 
