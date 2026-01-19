@@ -28,7 +28,7 @@ public class ListaEncadeadaSimples {
             return null;
         }
 
-        No atual = primeiro;
+        No atual = primeiro; // "primeiro" se refere ao valor que está no início da lista"
 
         while (atual != null) {
             System.out.print("[" + atual.getValor() + "] -> ");
@@ -160,6 +160,7 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
 
 
