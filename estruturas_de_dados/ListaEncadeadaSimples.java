@@ -14,7 +14,7 @@ public class ListaEncadeadaSimples {
     public void inserirInicio(short valor) {
 
         No novo = new No(valor);
-        novo.setProximo(primeiro); // O valor de "proximo" passa de "null" para o antigo "primeiro"
+        novo.setProximo(primeiro); // O valor de "proximo" do novo nó passa de "null" para o antigo "primeiro"
         primeiro = novo; // A variável primeiro (head) passa a apontar para novo
     }
 
@@ -49,7 +49,7 @@ public class ListaEncadeadaSimples {
             return null;
         }
 
-        No atual = primeiro;
+        No temp = primeiro;
 
         while (atual.getValor() != valor) {
 
@@ -60,7 +60,7 @@ public class ListaEncadeadaSimples {
             }
         }
 
-        return atual;
+        return temp;
     }
 
 
@@ -74,15 +74,15 @@ public class ListaEncadeadaSimples {
             return null;
         }
 
-        No temp = primeiro;
+        No atual = primeiro;
         primeiro = primeiro.getProximo();
 
-        return temp;
+        return atual;
     }
 
 
     /* =========================
-       EXCLUIR NO QUALQUER
+       EXCLUIR NÓ QUALQUER
        ========================= */
     public No excluirQualquer(short valor) {
 
@@ -160,5 +160,6 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
 
