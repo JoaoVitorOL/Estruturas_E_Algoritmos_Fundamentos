@@ -117,7 +117,7 @@ O(1), Independe do tamanho da lista.
 O nó "removido", apenas perde sua ligação com a lista.
 
 # 🔍 Mostrar lista
-![mostrar lsita](../assets/encadeada.png)
+![mostrar lista](../assets/listaencadeada.png)
 
 ## Funcionamento
 
