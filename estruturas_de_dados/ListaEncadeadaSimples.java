@@ -109,7 +109,7 @@ public class ListaEncadeadaSimples {
         if (atual == primeiro) {
             primeiro = primeiro.getProximo(); // 🔹 Caso 1 — o nó a remover é o primeiro
         } else {
-            anterior.setProximo(atual.getProximo()); // 🔹 Caso 2 — o nó está no meio ou no fim
+            anterior.setProximo(atual.getProximo()); // 🔹 Caso 2 — o nó está no meio ou no fim (Aqui é onde acontece a reorganização dos ponteiros)
         }
 
         return atual;
@@ -162,6 +162,7 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
 
 
