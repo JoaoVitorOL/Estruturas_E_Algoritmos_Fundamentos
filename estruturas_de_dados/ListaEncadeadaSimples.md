@@ -168,7 +168,7 @@ Essa operação tem custo:
 
 ## 🔎 Pesquisar valor
 
-![Pesquisar](../assets/listaencadeadapng)
+![Pesquisar](../assets/listaencadeada.png)
 
 ### Funcionamento
 
