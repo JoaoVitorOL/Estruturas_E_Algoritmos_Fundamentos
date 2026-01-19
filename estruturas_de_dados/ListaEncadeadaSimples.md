@@ -35,8 +35,8 @@ Aspectos técnicos importantes:
 O último nó da lista sempre possui:
 proximo == null , indicando o fim da lista.
 
-## 🧠 Conceito central: posição × relacionamento
-# Vetor (array) 
+# 🧠 Conceito central: posição × relacionamento
+## Vetor (array) 
 
 ⚫ Cada elemento ocupa uma posição fixa na memória. <br>
 ⚫ O acesso é feito por índice. <br>
@@ -44,7 +44,7 @@ proximo == null , indicando o fim da lista.
 ```text
 arr[0] arr[1] arr[2]
 ````
-# Lista Encadeada
+## Lista Encadeada
 
 ⚫ Os elementos não possuem posição fixa. <br>
 ⚫ Cada nó conhece apenas o próximo. <br>
@@ -57,7 +57,7 @@ primeiro → nó1 → nó2 → nó3 → null
 Consequência direta:
 Para acessar o 3º elemento, é necessário passar pelo 1º e pelo 2º
 
-## 🗣️ Cabeça da lista (head)
+# 🗣️ Cabeça da lista (head)
 A lista mantém uma referência especial:
 
 ```java
@@ -72,7 +72,7 @@ Observações importantes:
 ⚫ "primeiro" não é um nó. <br>
 ⚫ É apenas uma referência externa mantida pela estrutura da lista. <br>
 
-## ⚙️ Operações fundamentais
+# ⚙️ Operações fundamentais
 A lista encadeada simples implementa as seguintes operações:
 ⚫ Inserir no início <br>
 ⚫ Excluir do início <br>
@@ -81,14 +81,14 @@ A lista encadeada simples implementa as seguintes operações:
 ⚫ Excluir em qualquer posição <br>
 Todas funcionam exclusivamente por manipulação de referências, nunca por índices.
 
-## ➕ Inserir no início
+# ➕ Inserir no início
 
 ![Inserir Início](../assets/encadeadainseririnicio.png)
 
-# Objetivo
+## Objetivo
 ⚫ Adicionar um novo nó como primeiro elemento da lista. <br>
 
-# Procedimento lógico
+## Procedimento lógico
 1. Criar um novo nó.
 2. Fazer o novo nó apontar para o antigo primeiro nó.
 3. Atualizar o head da lista para o novo nó.
@@ -101,13 +101,13 @@ primeiro → novo
 Complexidade: 
 O(1), Independe do tamanho da lista.
 
-## ➖ Excluir do início
+# ➖ Excluir do início
 ![Excluir Início](../assets/encadeadaexcluirinicio.png)
 
-# Objetivo
+## Objetivo
 ⚫ Remover o primeiro nó da lista. <br>
 
-# Procedimento lógico
+## Procedimento lógico
 
 1  Guardar o nó atualmente apontado por primeiro.
 2. Fazer "primeiro" apontar para o segundo nó.
@@ -116,10 +116,10 @@ O(1), Independe do tamanho da lista.
 # Observação técnica
 O nó "removido", apenas perde sua ligação com a lista.
 
-## 🔍 Mostrar lista
+# 🔍 Mostrar lista
 ![mostrar lsita](../assets/encadeada.png)
 
-# Funcionamento
+## Funcionamento
 
 1. Começa pelo nó apontado por "primeiro".
 2. Percorre a lista utilizando "proximo".
@@ -132,28 +132,28 @@ while (atual != null)
 Complexidade: 
 O(n), onde n é o número de nós da lista
 
-## 🔎 Pesquisar valor
+# 🔎 Pesquisar valor
 
-# Funcionamento
+## Funcionamento
 
 1. Percorre a lista sequencialmente
 2. Compara o valor de cada nó
 
-# Finaliza quando:
+## Finaliza quando:
 o valor é encontrado, ou o final da lista é alcançado (null)
 
 Observação importante
 ⚫ Não existe atalho. <br>
 ⚫ Mesmo listas ordenadas exigem percurso sequencial. <br>
 
-## ❌ Excluir em qualquer posição
+# ❌ Excluir em qualquer posição
 
 ![Excluir qualquer](../assets/encadeadaposicaoqualquer.png)
 
-# Objetivo
+## Objetivo
 Remover um nó específico com base no valor.
 
-# Necessidade adicional
+## Necessidade adicional
 
 São necessárias duas referências:
 
@@ -161,7 +161,7 @@ atual → nó sendo analisado <br>
 anterior → nó imediatamente anterior <br>
 
 
-# Procedimento lógico
+## Procedimento lógico
 
 1. Localizar o nó desejado.
 2. Fazer o nó anterior apontar para o próximo do nó removido.
@@ -175,7 +175,7 @@ anterior → proximo
 
 ````
 
-##  📌 Características finais da lista encadeada simples
+#  📌 Características finais da lista encadeada simples
 
 ⚫ Estrutura dinâmica <br>
 ⚫ Uso intensivo de referências <br>
