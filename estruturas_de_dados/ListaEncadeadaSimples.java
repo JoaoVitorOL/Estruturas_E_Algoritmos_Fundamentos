@@ -91,23 +91,25 @@ public class ListaEncadeadaSimples {
             return null;
         }
 
-        No atual = primeiro;
-        No anterior = primeiro;
+        No atual = primeiro; // atual → nó sendo analisado
+        No anterior = primeiro; // anterior → nó que aponta para atual
 
         while (atual.getValor() != valor) {
 
             if (atual.getProximo() == null) {
                 return null;
             } else {
-                anterior = atual;
-                atual = atual.getProximo();
+                anterior = atual; // anterior anda um passo atrás
+                atual = atual.getProximo(); // atual anda um passo à frente
+                // Antes: anterior → [A]  atual → [B]  |   Depois:  anterior → [B] atual  → [C]
+
             }
         }
 
         if (atual == primeiro) {
-            primeiro = primeiro.getProximo();
+            primeiro = primeiro.getProximo(); // 🔹 Caso 1 — o nó a remover é o primeiro
         } else {
-            anterior.setProximo(atual.getProximo());
+            anterior.setProximo(atual.getProximo()); // 🔹 Caso 2 — o nó está no meio ou no fim
         }
 
         return atual;
@@ -160,6 +162,7 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
 
 
