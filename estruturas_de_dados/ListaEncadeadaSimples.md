@@ -99,7 +99,7 @@ Todas essas operações funcionam **manipulando referências**, nunca índices.
 
 ## ➕ Inserir no início
 
-![Inserção no início](sandbox:/mnt/data/lista_encadeada_imagens/page_6_img_1.png)
+![Inserção no início](../assets/encadeadainseririnicio.png)
 
 ### Objetivo
 
