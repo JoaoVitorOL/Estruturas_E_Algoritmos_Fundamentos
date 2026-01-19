@@ -168,7 +168,7 @@ Essa operação tem custo:
 
 ## 🔎 Pesquisar valor
 
-![Pesquisar](sandbox:/mnt/data/lista_encadeada_imagens/page_15_img_1.png)
+![Pesquisar](../assets/listaencadeadapng)
 
 ### Funcionamento
 
@@ -187,7 +187,7 @@ Essa operação tem custo:
 
 ## ❌ Excluir em qualquer posição
 
-![Excluir qualquer](sandbox:/mnt/data/lista_encadeada_imagens/page_16_img_1.png)
+![Excluir qualquer](../assets/encadeadaposicaoqualquer.png)
 
 ### Objetivo
 
