@@ -2,8 +2,8 @@ package estruturas_de_dados;
 
 public class ListaEncadeadaDuplamente {
 
-    private No primeiro;
-    private No ultimo;
+    private No primeiro;  // variável que guarda o endereço do primeiro nó
+    private No ultimo;  //variável que guarda o endereço do ultimo nó
 
     /* =========================
        CONSTRUTOR
@@ -30,11 +30,11 @@ public class ListaEncadeadaDuplamente {
         if (listaVazia()) {
             ultimo = novo;
         } else {
-            primeiro.setAnterior(novo);
-            novo.setProximo(primeiro);
+            primeiro.setAnterior(novo); // O antigo primeiro passa a apontar para trás
+            novo.setProximo(primeiro); //  O novo aponta para frente
         }
 
-        primeiro = novo;
+        primeiro = novo; // Atualiza o ponto de entrada da lista (Valor inicial da lista)
     }
 
     /* =========================
@@ -290,3 +290,4 @@ public class ListaEncadeadaDuplamente {
     }
 
 }
+
