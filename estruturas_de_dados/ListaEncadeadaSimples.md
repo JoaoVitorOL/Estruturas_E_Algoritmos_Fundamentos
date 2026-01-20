@@ -21,18 +21,18 @@ Não existe acesso direto por índice. Para alcançar um elemento intermediário
 > - Variáveis locais e referências ficam na STACK
 > - Variáveis de tipo objeto armazenam REFERÊNCIAS, não o objeto em si
 
-> 2. Estado inicial do programa
+> 2. Estado inicial do programa: 
 > A lista contém apenas uma referência para o primeiro nó.
 
 > 3. Inserção de nós
 > Cada 'new No(valor)' cria um objeto separado no heap.
 > A lista aponta apenas para o primeiro.
 
-> 4. Encadeamento
+> 4. Encadeamento: 
 > Os nós se conectam por referências (proximo/anterior).
 > Não existe armazenamento sequencial.
 
-> 5. Exclusão
+> 5. Exclusão: 
 > Excluir remove referências, não objetos imediatamente.
 > O Garbage Collector limpa depois.
 
