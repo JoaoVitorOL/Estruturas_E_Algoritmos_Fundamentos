@@ -15,6 +15,8 @@ A **Lista Encadeada Duplamente** é uma **estrutura de dados linear e dinâmica*
 - Cada elemento (nó) mantém **duas ligações estruturais**
 - A navegação pode ocorrer **do início para o fim** e **do fim para o início**
 
+Listas encadeadas são uma **cadeia de referências**.
+
 Ela resolve uma limitação direta da lista simples:
 > não precisar manter manualmente um ponteiro `anterior` durante remoções no meio da lista.
 
