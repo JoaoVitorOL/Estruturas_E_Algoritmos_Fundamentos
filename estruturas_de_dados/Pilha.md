@@ -24,6 +24,8 @@ Base
 [30]  ← Topo
 ````
 
+![pilha lógica ](../assets/pilhalogica.png)
+
 #🧠 ONDE OS DADOS DA PILHA FICAM NA MEMÓRIA (JAVA)
 ##1️⃣ Regras de memória aplicáveis
 
