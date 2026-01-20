@@ -25,16 +25,16 @@ public class ListaEncadeadaDuplamente {
        ========================= */
     public void inserirInicio(short valor) {
 
-        No novo = new No(valor);
+        No novoPrimeiro = new No(valor);
 
         if (listaVazia()) {
-            ultimo = novo;
+            ultimo = novoPrimeiro;
         } else {
-            primeiro.setAnterior(novo); // O antigo primeiro passa a apontar para trás
-            novo.setProximo(primeiro); //  O novo aponta para frente
+            primeiro.setAnterior(novoPrimeiro); // O antigo primeiro passa a apontar para trás
+            novoPrimeiro.setProximo(primeiro); //  O novo aponta para frente
         }
 
-        primeiro = novo; // Atualiza o ponto de entrada da lista (Valor inicial da lista)
+        primeiro = novoPrimeiro; // Atualiza o ponto de entrada da lista (Valor inicial da lista)
     }
 
     /* =========================
@@ -42,16 +42,16 @@ public class ListaEncadeadaDuplamente {
        ========================= */
     public void inserirFinal(short valor) {
 
-        No novo = new No(valor);
+        No novoUltimo= new No(valor);
 
         if (listaVazia()) {
-            primeiro = novo;
+            primeiro = novoUltimo;
         } else {
-            ultimo.setProximo(novo);
-            novo.setAnterior(ultimo);
+            ultimo.setProximo(novoUltimo);
+            novoUltimo.setAnterior(ultimo);
         }
 
-        ultimo = novo;
+        ultimo = novoUltimo;
     }
 
     /* =========================
@@ -290,5 +290,6 @@ public class ListaEncadeadaDuplamente {
     }
 
 }
+
 
 
