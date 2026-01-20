@@ -9,16 +9,19 @@
 
 ## 🎯 Função principal
 
-A **Lista Encadeada Duplamente** é uma **estrutura de dados linear e dinâmica**, na qual:
+A Lista Encadeada Duplamente é uma estrutura de dados linear, dinâmica e não contígua, caracterizada por:
 
-- Os elementos **não ocupam posições fixas de memória**
-- Cada elemento (nó) mantém **duas ligações estruturais**
-- A navegação pode ocorrer **do início para o fim** e **do fim para o início**
+- Alocação dinâmica no Heap
+- Ausência de endereçamento sequencial
+- Navegação bidirecional
+- Encadeamento explícito por referências
 
-Listas encadeadas são uma **cadeia de referências**.
+Cada elemento (nó) conhece:
 
-Ela resolve uma limitação direta da lista simples:
-> não precisar manter manualmente um ponteiro `anterior` durante remoções no meio da lista.
+- Quem vem antes
+- Quem vem depois
+
+Formalmente, a lista é um grafo linear direcionado em duas direções, com restrições de borda.
 
 
 <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/f506b36d-c9a9-44f3-9603-5552b139922d" />
@@ -30,7 +33,7 @@ Ela resolve uma limitação direta da lista simples:
 > 1. Regra fundamental de memória em Java
 > - Objetos criados com 'new' ficam no HEAP
 > - Variáveis locais e referências ficam na STACK
-> - Variáveis de tipo objeto armazenam REFERÊNCIAS, não o objeto em si
+> - Variáveis de tipo objeto não armazenam dados, apenas endereços
 
 > 2. Estado inicial do programa: 
 > A lista contém apenas uma referência para o primeiro nó.
