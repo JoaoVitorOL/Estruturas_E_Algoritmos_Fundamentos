@@ -2,7 +2,7 @@ package estruturas_de_dados;
 
 public class ListaEncadeadaSimples {
 
-    private No primeiro; // ligação estrutural (HEAD da lista)
+    private No primeiro; // ligação estrutural (HEAD da lista)  | Variáveis de tipo objeto guardam REFERÊNCIAS, não os objetos em si
 
     public ListaEncadeadaSimples() { 
         this.primeiro = null;
@@ -162,6 +162,7 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
 
 
