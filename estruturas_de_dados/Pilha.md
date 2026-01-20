@@ -150,3 +150,25 @@ pilha = [10, 20, ?, ?, ?]
 topo  = 0
 ````
 ⚠️ O 20 ainda existe no array, mas está inacessível pela pilha.
+
+---
+
+
+### 📌 Características finais da pilha
+
+- Estrutura LIFO <br>
+- Inserção e remoção em tempo O(1) <br>
+- Implementação simples <br>
+- Uso de memória contínua (array) <br>
+- Não permite acesso direto a elementos internos <br>
+- Controle lógico feito apenas pelo índice topo <br>
+
+### 🔗 Relação com outras estruturas
+
+- A pilha é base direta para: <br>
+- Chamadas de função (call stack) <br>
+- Undo / Redo <br>
+- Avaliação de expressões <br>
+- Backtracking <br>
+- Algoritmos de busca (DFS) <br>
+- Parsers e compiladores <br>
