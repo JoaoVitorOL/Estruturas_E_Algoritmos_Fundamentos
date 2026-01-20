@@ -1,2 +1,2 @@
 # 📦 Pilhas (PT-BR)
-![Construção da pilha](../assets/encadeadaconstruir.png)
+![Construção da pilha](../assets/pilha.png)
