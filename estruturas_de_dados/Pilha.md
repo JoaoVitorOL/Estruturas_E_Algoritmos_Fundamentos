@@ -3,7 +3,7 @@
 
 ---
 
-#🎯 Função principal
+# 🎯 Função principal
 
 A Pilha é uma estrutura de dados linear e estática (nesta implementação), que segue rigorosamente o princípio:
 
@@ -26,8 +26,8 @@ Base
 
 ![pilha lógica ](../assets/pilhalogica.jpeg)
 
-#🧠 ONDE OS DADOS DA PILHA FICAM NA MEMÓRIA (JAVA)
-##1️⃣ Regras de memória aplicáveis
+# 🧠 ONDE OS DADOS DA PILHA FICAM NA MEMÓRIA (JAVA)
+## 1️⃣ Regras de memória aplicáveis
 
 > - Arrays criados com "new" ficam no HEAP
 > - Variáveis primitivas e referências ficam na STACK
