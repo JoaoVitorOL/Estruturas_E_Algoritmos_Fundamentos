@@ -202,6 +202,158 @@ vira
 anterior → proximo
 
 ````
+---
+
+## 👀 ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA)
+
+
+ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA) <br>
+========================================================  <br>
+
+1) CRIAÇÃO DA LISTA <br>
+------------------ <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► referência 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro = null <br>
+} <br>
+
+-------------------------------------------------------- <br>
+
+2) lista.inserirInicio((short) 10) <br>
+--------------------------------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x200 <br>
+}
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+}
+
+-------------------------------------------------------- <br>
+
+3) lista.inserirInicio((short) 20) <br>
+--------------------------------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x300 <br>
+} <br>
+
+0x300 → No { <br>
+    valor   = 20 <br>
+    proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+} <br>
+
+-------------------------------------------------------- <br>
+
+4) lista.inserirInicio((short) 30) <br>
+--------------------------------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x400 <br>
+} <br>
+
+0x400 → No { <br>
+    valor   = 30 <br>
+    proximo ───────► 0x300 <br>
+} <br>
+
+0x300 → No { <br>
+    valor   = 20 <br>
+    proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+} <br>
+
+-------------------------------------------------------- <br>
+
+5) lista.excluirInicio() <br>
+----------------------- <br>
+
+ANTES: <br>
+------ <br>
+primeiro ─► 0x400 → 30 → 20 → 10 → null <br>
+
+DEPOIS: <br>
+------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x300 <br>
+} <br>
+
+0x400 → No { <br>
+    valor   = 30 <br>
+    proximo = null   (NÓ DESCONECTADO) <br>
+}
+
+0x300 → No { <br>
+    valor   = 20 <br>
+    proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+} <br>
+
+OBS: <br>
+---- <br>
+O nó 0x400 não está mais ligado à lista. <br>
+Se não existir nenhuma outra referência para ele, <br>
+o Garbage Collector poderá removê-lo futuramente. <br>
+
+-------------------------------------------------------- <br>
+
+6) CONCEITO-CHAVE <br>
+----------------- <br>
+- A lista NÃO contém os nós fisicamente. <br>
+- A lista contém APENAS uma referência para o primeiro nó. <br>
+- Cada nó aponta para o próximo. <br>
+- A estrutura da lista é formada exclusivamente por referências. <br>
+
+
+
+
+---
 
 #  📌 Características finais da lista encadeada simples
 
