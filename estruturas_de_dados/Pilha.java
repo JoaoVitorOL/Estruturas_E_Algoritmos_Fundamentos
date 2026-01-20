@@ -12,7 +12,9 @@ public class Pilha {
         this.topo = -1;
     }
 
-
+//==============================================================
+//            VERIFICAÇÕES VAZIA|CHEIA
+//==============================================================
     private boolean cheia() {
         return topo == pilha.length - 1;
     }
@@ -21,6 +23,9 @@ public class Pilha {
         return topo == -1;
     }
 
+//==============================================================
+//            EMPILHAR (ADICIONAR)
+//==============================================================
     public void empilhar(short valor) {
 
         if (cheia()) {
@@ -30,7 +35,9 @@ public class Pilha {
         topo++;
         pilha[topo] = valor;
     }
-
+//==============================================================
+//            VER TOPO
+//==============================================================
     public void verTopo() {
 
         if (vazia()) {
@@ -40,6 +47,9 @@ public class Pilha {
         }
     }
 
+//==============================================================
+//            EXCLUIR TOPO
+//==============================================================
     public void ignorarTopo() {  
 
         if (vazia()) {
@@ -71,3 +81,4 @@ public class Pilha {
     }
 
 }
+
