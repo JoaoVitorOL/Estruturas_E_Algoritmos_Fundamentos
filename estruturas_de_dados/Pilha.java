@@ -58,7 +58,7 @@ public class Pilha {
         }
 
         short valor = pilha[topo];
-        topo--;  //O valor do topo não é relamente removido, apenas passa a ser ignorado. (não apaga fisicamente o valor removido. Ela apenas ajusta o índice do topo)
+        topo--;  //O valor do topo não é realmente removido, apenas passa a ser ignorado.(Até ser eventualmente sobre-escrito por outra informação)
         System.out.println("Valor desempilhado: " + valor);
     }
 
@@ -81,4 +81,5 @@ public class Pilha {
     }
 
 }
+
 
