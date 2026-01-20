@@ -12,6 +12,8 @@ Listas encadeadas são uma **cadeia de referências**.
 
 Não existe acesso direto por índice. Para alcançar um elemento intermediário, é necessário **percorrer a lista nó a nó**, seguindo as referências.
 
+<img width="300" height="216" alt="image" src="https://github.com/user-attachments/assets/f67cb3fd-c202-4959-a572-9b23a59b0ef3" />
+
 ---
 
 ## 🧠 ONDE OS DADOS DE UMA LISTA ENCADEADA FICAM NA MEMÓRIA (JAVA)
@@ -38,9 +40,6 @@ Não existe acesso direto por índice. Para alcançar um elemento intermediário
 
 > 6. Conceito-chave
 > Lista encadeada é uma estrutura lógica baseada em referências.
-
-<img width="300" height="216" alt="image" src="https://github.com/user-attachments/assets/f67cb3fd-c202-4959-a572-9b23a59b0ef3" />
-
 
 ---
 
