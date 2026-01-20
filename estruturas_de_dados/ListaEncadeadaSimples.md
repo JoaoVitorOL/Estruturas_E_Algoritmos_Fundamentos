@@ -40,6 +40,8 @@ Não existe acesso direto por índice. Para alcançar um elemento intermediário
 > Lista encadeada é uma estrutura lógica baseada em referências.
 
 <img width="300" height="216" alt="image" src="https://github.com/user-attachments/assets/f67cb3fd-c202-4959-a572-9b23a59b0ef3" />
+
+
 ---
 
 ## 🧱 Estrutura básica da lista
