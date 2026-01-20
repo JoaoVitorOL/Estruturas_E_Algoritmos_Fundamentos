@@ -20,6 +20,9 @@ Listas encadeadas são uma **cadeia de referências**.
 Ela resolve uma limitação direta da lista simples:
 > não precisar manter manualmente um ponteiro `anterior` durante remoções no meio da lista.
 
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/f506b36d-c9a9-44f3-9603-5552b139922d" />
+
 ---
 
 ## 🧠 ONDE OS DADOS DE UMA LISTA ENCADEADA FICAM NA MEMÓRIA (JAVA)
