@@ -32,3 +32,42 @@ Início → [10] [20] [30] ← Fim
 > Variáveis primitivas e referências ficam na STACK
 > O array armazena valores primitivos (short)
 > A fila cresce e diminui logicamente, não fisicamente
+
+---
+
+# 🧱 Estrutura interna da fila
+
+```java
+private short inicio; // Índice do primeiro elemento válido
+private short fim; // Índice do último elemento inserido
+private short elementos; // Quantidade lógica de elementos
+private short capacidade; // Tamanho máximo da fila
+private short[] fila; // Array que armazena os valores
+````
+
+# ⚙️ Estado inicial da fila
+
+```java
+public Fila(short capacidade) {
+    this.capacidade = capacidade;
+    this.fila = new short[capacidade];
+    this.inicio = 0;
+    this.fim = -1;
+    this.elementos = 0;
+}
+````
+Representação lógica inicial:
+```text
+fila        = [ ?, ?, ?, ?, ? ]
+inicio      = 0
+fim         = -1
+elementos   = 0
+capacidade  = 5
+````
+
+## 🗝️ Conceito-chave
+
+> "inicio" e "fim" não indicam posições fixas
+> Eles se movem conforme a fila cresce e diminui
+
+---
