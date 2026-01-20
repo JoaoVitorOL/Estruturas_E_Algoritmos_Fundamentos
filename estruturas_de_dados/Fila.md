@@ -19,4 +19,4 @@ Características principais: <br>
 Início → [10] [20] [30] ← Fim
 ````
 
-![fila lógica ](../assets/Filalogica.jpeg)
+![fila lógica ](../assets/Filalogica.jpg)
