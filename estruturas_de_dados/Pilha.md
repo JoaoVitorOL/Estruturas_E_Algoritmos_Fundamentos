@@ -27,8 +27,126 @@ Base
 ![pilha lógica ](../assets/pilhalogica.jpeg)
 
 # 🧠 ONDE OS DADOS DA PILHA FICAM NA MEMÓRIA (JAVA)
-## 1️⃣ Regras de memória aplicáveis
+### 1️⃣ Regras de memória aplicáveis
 
 > - Arrays criados com "new" ficam no HEAP
 > - Variáveis primitivas e referências ficam na STACK
 > - O array armazena valores, não referências (neste caso short)
+
+### 2️⃣ Estado inicial da pilha
+
+Ao criar a pilha:
+```java
+Pilha minhaPilha = new Pilha((short) 5);
+````
+⚫ Um array de tamanho fixo é criado <br>
+⚫ Nenhum valor está logicamente presente <br>
+⚫ O topo indica nenhum elemento <br>
+
+### 3️⃣ Conceito-chave
+
+> A pilha não cresce nem encolhe na memória
+> Ela cresce e encolhe logicamente, através do índice "topo"
+
+## 🧱 Estrutura interna da pilha
+
+```java
+private short[] pilha; // Array que armazena os valores
+private short topo;    // Índice do último elemento válido
+````
+
+## ➕ Empilhar (push)
+```java
+public void empilhar(short valor) {
+
+    if (cheia()) {
+        System.out.println("Pilha cheia");
+        return;
+    }
+    topo++;
+    pilha[topo] = valor;
+}
+````
+Execução passo a passo <br>
+
+- Verifica se a pilha está cheia <br>
+- Incrementa o índice topo <br>
+- Armazena o valor no array <br>
+
+```java
+empilhar(10);
+empilhar(20);
+````
+
+Estado da memória:
+
+```text
+pilha = [10, 20, ?, ?, ?]
+topo  = 1
+````
+
+## 👁️ Ver topo (peek)
+
+```java
+public void verTopo() {
+
+    if (vazia()) {
+        System.out.println("Pilha vazia");
+    } else {
+        System.out.println("Topo da pilha: " + pilha[topo]);
+    }
+}
+
+````
+Execução passo a passo <br>
+
+- Apenas consulta <br>
+- Não altera a estrutura <br>
+- Retorna o valor mais recente inserido <br>
+
+## ➖ Ignorar topo (pop lógico)
+
+```java
+public void ignorarTopo() {  
+
+    if (vazia()) {
+        System.out.println("Pilha vazia");
+        return;
+    }
+
+    short valor = pilha[topo];
+    topo--;
+    System.out.println("Valor desempilhado: " + valor);
+}
+
+
+````
+Conceito fundamental:
+
+> O valor não é apagado do array
+> Ele apenas deixa de ser considerado parte da pilha
+
+## 🧠 ESQUEMA VISUAL
+
+Estado inicial
+
+```text
+pilha = [ ?, ?, ?, ?, ? ]
+topo  = -1
+````
+
+empilhar(10)
+empilhar(20)
+
+```text
+pilha = [10, 20, ?, ?, ?]
+topo  = 1
+````
+
+ignorarTopo()
+
+```text
+pilha = [10, 20, ?, ?, ?]
+topo  = 0
+````
+⚠️ O 20 ainda existe no array, mas está inacessível pela pilha.
