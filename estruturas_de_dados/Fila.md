@@ -3,6 +3,8 @@
 
 🎯 Função principal
 
+![fila ](../assets/fila.png)
+
 A Fila é uma estrutura de dados linear e estática (nesta implementação) que segue rigorosamente o princípio:
 
 *FIFO — First In, First Out* <br>
