@@ -241,6 +241,210 @@ Funcionamento:
 Observação:
 Mesmo com lista dupla, a busca continua sequencial.
 
+---
+
+# 👁️  ESQUEMA VISUAL — LISTA DUPLAMENTE ENCADEADA NA MEMÓRIA (JAVA)
+
+CRIAÇÃO DA LISTA <br>
+
+Código: <br>
+
+ListaEncadeadaDuplamente lista = new ListaEncadeadaDuplamente(); <br>
+
+Stack: <br>
+
+lista ───────────────► referência 0x100 <br>
+
+Heap: <br>
+
+0x100 → ListaEncadeadaDuplamente { <br>
+primeiro = null <br>
+ultimo = null <br>
+} <br>
+
+lista.inserirInicio((short) 10) <br>
+
+Stack: <br>
+
+lista ───────────────► 0x100 <br>
+
+Heap: <br>
+
+0x100 → ListaEncadeadaDuplamente { <br>
+primeiro ───────► 0x200 <br>
+ultimo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+valor = 10 <br>
+anterior = null <br>
+proximo = null <br>
+} <br>
+
+OBS: <br>
+
+Primeiro e último apontam para o mesmo nó. <br>
+Lista com apenas um elemento. <br>
+
+lista.inserirInicio((short) 20) <br>
+
+Stack: <br>
+
+lista ───────────────► 0x100 <br>
+
+Heap: <br>
+
+0x100 → ListaEncadeadaDuplamente { <br>
+primeiro ───────► 0x300 <br>
+ultimo ───────► 0x200 <br>
+} <br>
+
+0x300 → No { <br>
+valor = 20 <br>
+anterior = null <br>
+proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+valor = 10 <br>
+anterior ───────► 0x300 <br>
+proximo = null <br>
+} <br>
+
+lista.inserirFinal((short) 30) <br>
+
+Stack: <br>
+
+lista ───────────────► 0x100 <br>
+
+Heap: <br>
+
+0x100 → ListaEncadeadaDuplamente { <br>
+primeiro ───────► 0x300 <br>
+ultimo ───────► 0x400 <br>
+} <br>
+
+0x300 → No { <br>
+valor = 20 <br>
+anterior = null <br>
+proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+valor = 10 <br>
+anterior ───────► 0x300 <br>
+proximo ───────► 0x400 <br>
+} <br>
+
+0x400 → No { <br>
+valor = 30 <br>
+anterior ───────► 0x200 <br>
+proximo = null <br>
+} <br>
+
+VISÃO LÓGICA: <br>
+
+null ← [20] ⇄ [10] ⇄ [30] → null <br>
+
+lista.excluirInicio() <br>
+
+ANTES: <br>
+
+primeiro ─► 0x300 ⇄ 0x200 ⇄ 0x400 <br>
+
+DEPOIS: <br>
+
+Stack: <br>
+
+lista ───────────────► 0x100 <br>
+
+Heap: <br>
+
+0x100 → ListaEncadeadaDuplamente { <br>
+primeiro ───────► 0x200 <br>
+ultimo ───────► 0x400 <br>
+} <br>
+
+0x300 → No { <br>
+valor = 20 <br>
+anterior = null <br>
+proximo = null (NÓ DESCONECTADO) <br>
+} <br>
+
+0x200 → No { <br>
+valor = 10 <br>
+anterior = null <br>
+proximo ───────► 0x400 <br>
+} <br>
+
+0x400 → No { <br>
+valor = 30 <br>
+anterior ───────► 0x200 <br>
+proximo = null <br>
+} <br>
+
+OBS: <br>
+
+O nó 0x300 foi removido da lista. <br>
+Ele continua no heap, mas está isolado. <br>
+Se não houver mais referências, o Garbage Collector poderá removê-lo. <br>
+
+lista.excluirFinal() <br>
+
+ANTES: <br>
+
+primeiro ─► 0x200 ⇄ 0x400 <br>
+
+DEPOIS: <br>
+
+Stack: <br>
+
+lista ───────────────► 0x100 <br>
+
+Heap: <br>
+
+0x100 → ListaEncadeadaDuplamente { <br>
+primeiro ───────► 0x200 <br>
+ultimo ───────► 0x200 <br>
+} <br>
+
+0x400 → No { <br>
+valor = 30 <br>
+anterior = null <br>
+proximo = null (NÓ DESCONECTADO) <br>
+} <br>
+
+0x200 → No { <br>
+valor = 10 <br>
+anterior = null <br>
+proximo = null <br>
+} <br>
+
+CONCEITOS-CHAVE <br>
+
+A lista NÃO contém os nós fisicamente. <br>
+
+A lista mantém apenas DUAS referências: <br>
+
+primeiro <br>
+
+ultimo <br>
+
+Cada nó contém: <br>
+
+um valor <br>
+
+uma referência para o próximo <br>
+
+uma referência para o anterior <br>
+
+A ordem da lista é definida exclusivamente pelas referências. <br>
+
+Os nós estão espalhados no heap, não em posições contíguas. <br>
+
+
+---
+
 ## 🔗 Relação com outras estruturas
 
 A lista duplamente encadeada é base direta para:
