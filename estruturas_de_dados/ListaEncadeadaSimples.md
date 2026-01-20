@@ -64,7 +64,7 @@ O último nó da lista sempre possui:
 proximo == null , indicando o fim da lista.
 
 # 🧠 Conceito central: posição × relacionamento
-## Vetor (array) 
+### Vetor (array) 
 
 ⚫ Cada elemento ocupa uma posição fixa na memória. <br>
 ⚫ O acesso é feito por índice. <br>
@@ -72,7 +72,7 @@ proximo == null , indicando o fim da lista.
 ```text
 arr[0] arr[1] arr[2]
 ````
-## Lista Encadeada
+### Lista Encadeada
 
 ⚫ Os elementos não possuem posição fixa. <br>
 ⚫ Cada nó conhece apenas o próximo. <br>
@@ -92,16 +92,16 @@ A lista mantém uma referência especial:
 private No primeiro;
 ````
 
-Funções dessa referência:
+Funções dessa referência: <br>
 ⚫ Apontar para o primeiro nó da lista. <br>
 ⚫ Servir como ponto de entrada para todas as operações. <br>
 
-Observações importantes:
+Observações importantes: <br>
 ⚫ "primeiro" não é um nó. <br>
 ⚫ É apenas uma referência externa mantida pela estrutura da lista. <br>
 
-# ⚙️ Operações fundamentais
-A lista encadeada simples implementa as seguintes operações:
+### ⚙️ Operações fundamentais
+A lista encadeada simples implementa as seguintes operações: <br>
 ⚫ Inserir no início <br>
 ⚫ Excluir do início <br>
 ⚫ Mostrar lista <br>
@@ -113,10 +113,10 @@ Todas funcionam exclusivamente por manipulação de referências, nunca por índ
 
 ![Inserir Início](../assets/encadeadainseririnicio.png)
 
-## Objetivo
+### Objetivo
 ⚫ Adicionar um novo nó como primeiro elemento da lista. <br>
 
-## Procedimento lógico
+### Procedimento lógico
 1. Criar um novo nó.  <br>
 2. Fazer o novo nó apontar para o antigo primeiro nó.  <br>
 3. Atualizar o head da lista para o novo nó. <br>
@@ -132,7 +132,7 @@ O(1), Independe do tamanho da lista.
 # ➖ Excluir do início
 ![Excluir Início](../assets/encadeadaexcluirinicio.png)
 
-## Objetivo
+### Objetivo
 ⚫ Remover o primeiro nó da lista. <br>
 
 ## Procedimento lógico
@@ -147,7 +147,7 @@ O nó "removido", apenas perde sua ligação com a lista.
 # 🔍 Mostrar lista
 ![mostrar lista](../assets/listaencadeada.png)
 
-## Funcionamento
+### Funcionamento
 
 1. Começa pelo nó apontado por "primeiro". <br>
 2. Percorre a lista utilizando "proximo". <br>
@@ -162,12 +162,12 @@ O(n), onde n é o número de nós da lista
 
 # 🔎 Pesquisar valor
 
-## Funcionamento
+### Funcionamento
 
 1. Percorre a lista sequencialmente <br>
 2. Compara o valor de cada nó <br>
 
-## Finaliza quando:
+### Finaliza quando:
 o valor é encontrado, ou o final da lista é alcançado (null)
 
 Observação importante
@@ -181,7 +181,7 @@ Observação importante
 ## Objetivo
 Remover um nó específico com base no valor.
 
-## Necessidade adicional
+### Necessidade adicional
 
 São necessárias duas referências:
 
@@ -189,7 +189,7 @@ atual → nó sendo analisado <br>
 anterior → nó imediatamente anterior <br>
 
 
-## Procedimento lógico
+### Procedimento lógico
 
 1. Localizar o nó desejado. <br>
 2. Fazer o nó anterior apontar para o próximo do nó removido. <br>
@@ -204,7 +204,7 @@ anterior → proximo
 ````
 ---
 
-## 👀 ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA)
+# 👀 ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA)
 
 
 ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA) <br>
