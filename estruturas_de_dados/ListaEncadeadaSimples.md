@@ -8,6 +8,7 @@ A **Lista Encadeada Simples** é uma **estrutura de dados linear e dinâmica**, 
 
 A lista é formada por **nós**, e cada nó conhece apenas o **próximo nó da sequência**.  
 O acesso à lista ocorre exclusivamente por meio de uma referência inicial chamada **primeiro** (ou **head**).
+Listas encadeadas são uma **cadeia de referências**.
 
 Não existe acesso direto por índice. Para alcançar um elemento intermediário, é necessário **percorrer a lista nó a nó**, seguindo as referências.
 
