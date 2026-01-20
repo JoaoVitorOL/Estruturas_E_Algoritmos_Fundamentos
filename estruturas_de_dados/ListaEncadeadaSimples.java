@@ -13,9 +13,9 @@ public class ListaEncadeadaSimples {
        ========================= */
     public void inserirInicio(short valor) {
 
-        No novo = new No(valor);
-        novo.setProximo(primeiro); // O valor de "proximo" do novo nó passa de "null" para o antigo "primeiro"
-        primeiro = novo; // A variável primeiro (head) passa a apontar para novo
+        No novoPrimeiro = new No(valor);
+        novoPrimeiro.setProximo(primeiro); // O valor de "proximo" do novo nó passa de "null" para o antigo "primeiro"
+        primeiro = novoPrimeiro; // A variável primeiro (head) passa a apontar para novo
     }
 
     /* =========================
@@ -162,6 +162,7 @@ public class ListaEncadeadaSimples {
         lista.mostrar();                   // esperado: 50, 40
     }
 }
+
 
 
 
