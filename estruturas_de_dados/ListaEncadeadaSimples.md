@@ -4,13 +4,15 @@
 ## 🎯 Função principal
 
 
-A **Lista Encadeada Simples** é uma **estrutura de dados linear e dinâmica**, utilizada para armazenar elementos de forma sequencial **sem uso de posições fixas de memória**, diferentemente de vetores (arrays).
+A **Lista Encadeada Simples** é uma estrutura de dados linear e dinâmica, utilizada para armazenar elementos de forma **sequencial sem uso de posições fixas de memória**, diferentemente de vetores (arrays).
 
-A lista é formada por **nós**, e cada nó conhece apenas o **próximo nó da sequência**.  
-O acesso à lista ocorre exclusivamente por meio de uma referência inicial chamada **primeiro** (ou **head**).
-Listas encadeadas são uma **cadeia de referências**.
+Ela é composta por nós e **cada nó conhece apenas o próximo nó da sequência**.
+**Não existe conhecimento global da estrutura**. A lista é formada exclusivamente por ligações entre nós.
 
-Não existe acesso direto por índice. Para alcançar um elemento intermediário, é necessário **percorrer a lista nó a nó**, seguindo as referências.
+> Uma lista encadeada é, conceitualmente, uma cadeia de referências, não um bloco contínuo de memória.
+
+**Não existe** acesso direto por **índice**.
+Para alcançar um elemento intermediário, é obrigatório **percorrer a lista nó a nó**, seguindo as referências até o destino.
 
 <img width="300" height="216" alt="image" src="https://github.com/user-attachments/assets/f67cb3fd-c202-4959-a572-9b23a59b0ef3" />
 
@@ -21,7 +23,7 @@ Não existe acesso direto por índice. Para alcançar um elemento intermediário
 > 1. Regra fundamental de memória em Java
 > - Objetos criados com 'new' ficam no HEAP
 > - Variáveis locais e referências ficam na STACK
-> - Variáveis de tipo objeto armazenam REFERÊNCIAS, não o objeto em si
+> - Variáveis de tipo objeto armazenam REFERÊNCIAS, não o objeto em si.
 
 > 2. Estado inicial do programa: 
 > A lista contém apenas uma referência para o primeiro nó.
@@ -61,7 +63,6 @@ Aspectos técnicos importantes:
   1. Valor representa informação. <br>
   2. "Próximo" representa uma ligação estrutural, não um dado. <br>
 
-
 O último nó da lista sempre possui:
 proximo == null , indicando o fim da lista.
 
@@ -70,6 +71,7 @@ proximo == null , indicando o fim da lista.
 
 ⚫ Cada elemento ocupa uma posição fixa na memória. <br>
 ⚫ O acesso é feito por índice. <br>
+⚫ Existe acesso direto <br>
 
 ```text
 arr[0] arr[1] arr[2]
@@ -101,6 +103,7 @@ Funções dessa referência: <br>
 Observações importantes: <br>
 ⚫ "primeiro" não é um nó. <br>
 ⚫ É apenas uma referência externa mantida pela estrutura da lista. <br>
+⚫ Sem ela, a lista se torna inacessível <br>
 
 ### ⚙️ Operações fundamentais
 A lista encadeada simples implementa as seguintes operações: <br>
@@ -109,7 +112,7 @@ A lista encadeada simples implementa as seguintes operações: <br>
 ⚫ Mostrar lista <br>
 ⚫ Pesquisar valor <br>
 ⚫ Excluir em qualquer posição <br>
-Todas funcionam exclusivamente por manipulação de referências, nunca por índices.
+⚠️ Nenhuma operação usa índice.
 
 # ➕ Inserir no início
 
