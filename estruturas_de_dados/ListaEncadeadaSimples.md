@@ -14,6 +14,33 @@ Não existe acesso direto por índice. Para alcançar um elemento intermediário
 
 ---
 
+## 🧠 ONDE OS DADOS DE UMA LISTA ENCADEADA FICAM NA MEMÓRIA (JAVA)
+
+> 1. Regra fundamental de memória em Java
+> - Objetos criados com 'new' ficam no HEAP
+> - Variáveis locais e referências ficam na STACK
+> - Variáveis de tipo objeto armazenam REFERÊNCIAS, não o objeto em si
+
+> 2. Estado inicial do programa
+> A lista contém apenas uma referência para o primeiro nó.
+
+> 3. Inserção de nós
+> Cada 'new No(valor)' cria um objeto separado no heap.
+> A lista aponta apenas para o primeiro.
+
+> 4. Encadeamento
+> Os nós se conectam por referências (proximo/anterior).
+> Não existe armazenamento sequencial.
+
+> 5. Exclusão
+> Excluir remove referências, não objetos imediatamente.
+> O Garbage Collector limpa depois.
+
+> 6. Conceito-chave
+> Lista encadeada é uma estrutura lógica baseada em referências.
+
+---
+
 ## 🧱 Estrutura básica da lista
 
 ### 🔹 Nó (Node)
