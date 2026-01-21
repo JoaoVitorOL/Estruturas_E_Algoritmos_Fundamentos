@@ -80,7 +80,7 @@ Um nó pode ter: <br>
 
 ---
 
-** 🌳 Árvore Binária de Busca (BST)
+## 🌳 Árvore Binária de Busca (BST)
 
 Uma Árvore Binária de Busca segue uma regra estrutural:
 
@@ -215,7 +215,7 @@ Pior caso: O(n)  <br>
 
 As travessias definem a ordem de visita dos nós.
 
-🔹 Pré-ordem (Raiz → Esquerda → Direita)
+### 🔹 Pré-ordem (Raiz → Esquerda → Direita)
 ````text
 Visita o nó antes dos filhos
 ````
@@ -229,7 +229,7 @@ public void preOrdem(No no) {
 }
 ````
 
-🔹 Em ordem (Esquerda → Raiz → Direita)
+### 🔹 Em ordem (Esquerda → Raiz → Direita)
 
 > Em uma BST, em ordem imprime os valores ordenados.
 
@@ -244,7 +244,7 @@ public void emOrdem(No no) {
 ````
 
 
-🔹 Pós-ordem (Esquerda → Direita → Raiz) <br>
+### 🔹 Pós-ordem (Esquerda → Direita → Raiz) <br>
 
 Usada em: <br>
 
@@ -264,3 +264,75 @@ public void posOrdem(No no) {
 
 
 ---
+
+## ❌ Exclusão de nós
+
+A exclusão depende da estrutura do nó. <br>
+
+### Caso 1 — Nó folha <br>
+> Simplesmente remove a referência do pai. <br>
+
+### Caso 2 — Nó com um filho <br>
+> O pai passa a apontar diretamente para o filho. <br>
+
+### Caso 3 — Nó com dois filhos (mais complexo)
+> Procedimento: <br>
+>  1. Encontrar o sucessor em ordem <br>
+>  2. Substituir o nó removido <br>
+>  3. Ajustar referências <br>
+>  O sucessor é: <br>
+> > o menor valor da subárvore direita <br>
+
+---
+
+## 👁️ ESQUEMA VISUAL — ÁRVORE BINÁRIA NA MEMÓRIA (JAVA)
+
+```text
+CRIAÇÃO DA ÁRVORE
+
+Stack:
+------
+arvore ─────────────► 0x100
+
+Heap:
+-----
+0x100 → ArvoreBinariaBusca {
+    raiz ───────► 0x200
+}
+
+0x200 → No {
+    valor = 40
+    esquerda ─────► 0x300
+    direita  ─────► 0x400
+}
+
+0x300 → No {
+    valor = 20
+    esquerda = null
+    direita = null
+}
+
+0x400 → No {
+    valor = 60
+    esquerda = null
+    direita = null
+}
+````
+
+Observações: <br>
+
+- Os nós não são contíguos <br>
+- A hierarquia é definida apenas por referências <br>
+- A árvore conhece apenas a raiz <br>
+
+---
+
+📌 Conceitos-chave finais
+
+- Árvore é estrutura não linear
+- Organização hierárquica
+- Baseada exclusivamente em referências
+- Performance depende do balanceamento
+- BST permite buscas eficientes
+
+
