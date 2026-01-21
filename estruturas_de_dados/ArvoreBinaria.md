@@ -271,7 +271,63 @@ public void posOrdem(No no) {
 
 
 ---
+## 👶 ENCONTRANDO O SUCESSOR
 
+Para que existe o successor em uma Árvore Binária de Busca (BST)?
+
+Você só precisa do sucessor em **UM caso específico** :
+> **Quando vai remover um nó que possui DOIS filhos.**
+
+### 🧠 O problema real ao remover um nó com dois filhos
+Considere esta BST:
+
+```text
+        50
+       /  \
+     30    70
+           / \
+         60   80
+````
+Agora você quer remover o **50.**
+
+## ❓ O que acontece se você simplesmente apagar o 50?
+A árvore perde a propriedade da BST, porque: <br>
+
+- tudo à esquerda precisa ser menor <br>
+- tudo à direita precisa ser maior <br>
+
+Você não pode escolher qualquer nó para subir no lugar do 50.
+
+## ✔️ A solução correta: substituir por um valor válido
+Existem duas escolhas matematicamente seguras:
+
+### Opção 1 — Sucessor em ordem (mais usada)
+Menor valor da subárvore direita
+
+### Opção 2 — Predecessor em ordem
+Maior valor da subárvore esquerda
+
+### O que é exatamente o successor?
+O successor de um nó é:
+> o menor valor que é MAIOR do que o nó que eu quero remover.
+> successor = nó mais à esquerda da subárvore direita
+
+Para remover o 50:
+```text
+        50
+       /  \
+     30    70
+           / \
+         60   80
+````
+ 1. Vá para a direita de 50 → 70 <br>
+ 2.  Depois vá sempre para a esquerda <br>
+ 3. Para no primeiro null <br>
+
+Neste caso, successor = 60 <br>
+
+
+---
 ## ❌ Exclusão de nós
 
 A exclusão depende da estrutura do nó. <br>
