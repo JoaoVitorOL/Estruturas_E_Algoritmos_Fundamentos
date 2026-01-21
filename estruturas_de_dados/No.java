@@ -3,8 +3,8 @@ package estruturas_de_dados;
 public class No {
 
     private final short valor;  // conteúdo do nó
-    private No proximo;  // ligação estrutural
-    private No anterior;  // ligação estrutural
+    private No proximo;  // ligação estrutural ( Usado na Lista encadeada simlpes)
+    private No anterior;  // ligação estrutural ( Usado na Lista encadeadadupla)
 
     public No(short valor) { // Construtor
         this.valor = valor;
@@ -33,4 +33,5 @@ public class No {
     }
 
 }
+
 
