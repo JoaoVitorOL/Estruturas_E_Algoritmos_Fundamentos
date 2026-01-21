@@ -16,7 +16,8 @@ Ela combina vantagens de: <br>
 Diferente de listas: <br>
 > não existe sequência linear única, a navegação depende da estrutura da árvore.
 
-<img width="6253" height="8000" alt="image" src="https://github.com/user-attachments/assets/bc447634-d063-4db4-bb47-3658ba6320cd" />
+<img width="433" height="612" alt="image" src="https://github.com/user-attachments/assets/70187061-a354-4b10-a594-21efe0d99dad" />
+
 
 ---
 
