@@ -108,6 +108,9 @@ Formalmente:  <br>
   10   30
 ````
 
+<img width="1388" height="1186" alt="image" src="https://github.com/user-attachments/assets/fe7dc8c7-4d1b-4fb3-b5bc-0040076b5740" />
+
+
 ---
 
 ## ➕ Inserção na árvore (BST)
