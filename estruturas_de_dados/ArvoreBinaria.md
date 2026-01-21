@@ -309,7 +309,7 @@ Maior valor da subárvore esquerda
 
 ### O que é exatamente o successor?
 O successor de um nó é:
-> o menor valor que é MAIOR do que o nó que eu quero remover.
+> o menor valor da direita que é MAIOR do que o nó que eu quero remover.
 > successor = nó mais à esquerda da subárvore direita
 
 Para remover o 50:
@@ -345,6 +345,23 @@ A exclusão depende da estrutura do nó. <br>
 >  3. Ajustar referências <br>
 >  O sucessor é: <br>
 > > o menor valor da subárvore direita <br>
+
+---
+
+## 💡 Reflexão
+
+> **“Por que não colocar o 70 no lugar do 50,
+> e depois empurrar o 60 para a esquerda?”**
+
+```text
+        50
+       /  \
+     30    70
+           / \
+         60   80
+````
+
+
 
 ---
 
