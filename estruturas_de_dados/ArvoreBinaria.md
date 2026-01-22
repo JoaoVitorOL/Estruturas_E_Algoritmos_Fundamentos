@@ -476,16 +476,18 @@ Continuando...
      55    65
 ````
 
-⚠️ Mas, 65 e 55 nunca deveria ficar sob a custódia do 70.
-Na árvore original, o limite superior dele era 50, não 70.
+⚠️ Mas, 65 e 55 nunca deveria ficar sob a custódia do 70. <br>
+Na árvore original, o limite superior dele era 50, não 70. <br>
+
+⚠️ 55 e 65 nunca deveria existir abaixo de um nó cujo limite histórico era 50. <br>
 
 > O nó que sobe para substituir outro não pode ter valores menores “passando por cima” dele futuramente.
 >  Um nó X passa a ter, em sua subárvore, valores que não pertencem ao intervalo de valores que X deveria dominar.
 
-👉 Isso é o “passar por cima”:
+👉 Isso é o “passar por cima”: <br>
 
-O valor 65 “ignora” o papel histórico do 50
-E passa a existir abaixo de um nó que não deveria governá-lo
+O valor 65 “ignora” o papel histórico do 50 <br>
+E passa a existir abaixo de um nó que não deveria governá-lo <br>
 
 ###  Mas, e seu eu ❓ 
 
