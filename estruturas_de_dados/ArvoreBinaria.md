@@ -459,6 +459,21 @@ Depois
 
 ⚠️ Eventual Violação da BST
 
+````text
+Continuando...
+        70
+       /  \
+     30    80
+       \
+        60
+       /  \
+     55    65
+````
+
+⚠️ 55 foi parar abaixo de 70, mesmo sendo menor que o valor promovido (70).
+Isso quebra a invariante da substituição:
+
+> O nó que sobe para substituir outro não pode ter valores menores “passando por cima” dele futuramente.
 
 ###  Mas, e seu eu ❓ 
 
