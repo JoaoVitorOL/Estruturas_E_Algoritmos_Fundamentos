@@ -2,7 +2,7 @@
 
 ## 🎯 Função principal
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b9e20132-c0bf-4377-bf9e-05eadac405e5" />
+<img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/2c3df323-5a9d-4149-968d-381e1318a5d9" />
 
 
 Uma Árvore Binária é uma estrutura de dados hierárquica, dinâmica e não linear, utilizada para organizar dados de forma que: <br>
