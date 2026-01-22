@@ -353,7 +353,10 @@ A exclusão depende da estrutura do nó. <br>
 > **“Por que não colocar o 70 no lugar do 50,
 > e depois empurrar o 60 para a esquerda?”**
 
+**Vamos simular exatamente isso.**
+
 ```text
+Antes
         50
        /  \
      30    70
@@ -361,7 +364,67 @@ A exclusão depende da estrutura do nó. <br>
          60   80
 ````
 
+````text
+Depois
+        70
+       /  \
+     30    80
+       \
+        60
 
+````
+Agora vamos verificar a regra da BST, nó por nó. <br>
+
+## 🔍 Verificação matemática (onde quebra)
+### 1️⃣ Raiz = 70
+
+Tudo à esquerda precisa ser < 70 <br>
+Tudo à direita precisa ser > 70 <br>
+
+Até aqui: <br>
+
+esquerda: 30, 60 → ok <br>
+direita: 80 → ok <br>
+
+Parece válido… **mas ainda não terminou**. <br>
+
+### 2️⃣ Verificando o nó 30
+````text
+     30
+       \
+        60
+````
+
+Regra da BST para o nó 30: <br>
+- esquerda < 30 <br>
+- direita > 30 <br>
+
+Aqui: <br>
+- direita = 60 → ok <br>
+
+Ainda **parece** válido. <br>
+
+### ❌ Agora vem o problema real
+
+> 60 está na subárvore esquerda de 70
+
+60 < 70  ✅ <br>
+Até aqui, tudo bem. <br>
+O problema surge quando a árvore cresce ou quando você faz **operações futuras**. <br>
+
+### 🚨 O erro estrutural criado
+
+Você quebrou a definição forte da BST, que é: <br>
+
+> Todo nó da subárvore direita de 50 deve ser maior que 50 
+> e todo nó da subárvore esquerda deve ser menor que 50 
+
+Quando você sobe o 70, você está: <br>
+
+- usando um nó que não é o menor maior <br>
+- deixando valores menores “atravessarem” níveis hierárquicos <br>
+
+Isso gera ambiguidade estrutural. <br>
 
 ---
 
