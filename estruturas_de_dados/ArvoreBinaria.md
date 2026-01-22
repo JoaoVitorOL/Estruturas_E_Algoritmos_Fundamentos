@@ -523,7 +523,7 @@ Para todo nó X: <br>
 - todos os nós na subárvore direita > X <br>
 
 ````text
-60 < 70 ❌
+60 > 70 ❌
 ````
 
 ⚠️ Violação direta da BST
@@ -533,6 +533,22 @@ Para todo nó X: <br>
 
 O sucessor é a melhor opção. Ele resolve isso automaticamente !
 
+# ✅ Por que o sucessor resolve tudo automaticamente ?
+
+O sucessor: <br>
+
+ - É o menor valor maior que o nó a ser removido <br>
+
+preserva: <br>
+
+ - limite inferior <br>
+ - limite superior <br>
+ - relações ancestrais <br>
+
+Ou seja: <br>
+
+Ele é o único nó que “cabe” exatamente no intervalo do nó removido. <br>
+Por isso ele funciona. <br>
 
 
 ---
