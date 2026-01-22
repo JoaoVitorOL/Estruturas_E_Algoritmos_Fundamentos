@@ -326,6 +326,26 @@ Para remover o 50:
 
 Neste caso, successor = 60 <br>
 
+```text
+Antes
+        50
+       /  \
+     30    70
+           / \
+         60   80
+````
+
+```text
+Depois
+        60
+       /  \
+     30    70
+             \
+              80
+````
+
+✔️ Nenhuma Violação direta da BST
+
 
 ---
 ## ❌ Exclusão de nós
@@ -350,7 +370,7 @@ A exclusão depende da estrutura do nó. <br>
 
 ## 💡 Reflexão
 
-> **“Por que não colocar o 70 no lugar do 50,
+> Ao excluir um nó com dois filhos, **“Por que não colocar o 70 no lugar do 50
 > e depois empurrar o 60 para a esquerda?”**
 
 **Vamos simular exatamente isso.**
@@ -408,9 +428,10 @@ Ainda **parece** válido. <br>
 
 > 60 está na subárvore esquerda de 70
 
-60 < 70  ✅ <br>
+60 < 70   <br>
 Até aqui, tudo bem. <br>
 O problema surge quando a árvore cresce ou quando você faz **operações futuras**. <br>
+
 
 ### 🚨 O erro estrutural criado
 
@@ -425,6 +446,65 @@ Quando você sobe o 70, você está: <br>
 - deixando valores menores “atravessarem” níveis hierárquicos <br>
 
 Isso gera ambiguidade estrutural. <br>
+
+````text
+Depois
+        70
+       /  \
+     30    80
+       \
+        60 Inconsistência
+
+````
+
+⚠️ Eventual Violação da BST
+
+
+###  Mas, e seu eu ❓ 
+
+> Subir o 70 para a raiz
+> Empurrar o 80 para a direita
+> Manter o 60 como filho esquerdo do 80
+
+````text
+Antes
+        50
+       /  \
+     30    70
+           / \
+         60   80
+````
+
+````text
+Depois
+        70
+       /  \
+     30    80
+           /
+         60
+
+````
+Agora vamos verificar as regras, nó por nó.
+
+### 📏 Regra formal da BST (recordação objetiva)
+
+Para todo nó X: <br>
+
+- todos os nós na subárvore esquerda < X <br>
+- todos os nós na subárvore direita > X <br>
+
+````text
+60 < 70 ❌
+````
+
+⚠️ Violação direta da BST
+
+
+# É por isso que:
+
+O sucessor é a melhor opção. Ele resolve isso automaticamente !
+
+
 
 ---
 
