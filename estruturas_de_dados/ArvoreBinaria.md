@@ -288,6 +288,12 @@ Considere esta BST:
            / \
          60   80
 ````
+Regras implícitas:
+
+- Subárvore esquerda de 50 → valores < 50
+- Subárvore direita de 50 → valores > 50
+
+Subárvore esquerda de 70 → valores entre 50 e 70
 Agora você quer remover o **50.**
 
 ## ❓ O que acontece se você simplesmente apagar o 50?
@@ -470,10 +476,16 @@ Continuando...
      55    65
 ````
 
-⚠️ 55 foi parar abaixo de 70, mesmo sendo menor que o valor promovido (70).
-Isso quebra a invariante da substituição:
+⚠️ Mas, 65 e 55 nunca deveria ficar sob a custódia do 70.
+Na árvore original, o limite superior dele era 50, não 70.
 
 > O nó que sobe para substituir outro não pode ter valores menores “passando por cima” dele futuramente.
+>  Um nó X passa a ter, em sua subárvore, valores que não pertencem ao intervalo de valores que X deveria dominar.
+
+👉 Isso é o “passar por cima”:
+
+O valor 65 “ignora” o papel histórico do 50
+E passa a existir abaixo de um nó que não deveria governá-lo
 
 ###  Mas, e seu eu ❓ 
 
