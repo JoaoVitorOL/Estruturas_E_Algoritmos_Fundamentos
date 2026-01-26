@@ -6,7 +6,7 @@
 ---
 
 
-## 1. O que é recursão
+## ❓ 1. O que é recursão
 
 Recursão é uma técnica onde **uma função chama a si mesma** para resolver um problema menor, até chegar a um ponto onde **não precisa mais chamar**.
 
@@ -19,173 +19,186 @@ Sem caso base → loop infinito → StackOverflowError.
 
 ---
 
-# 🎯 Função principal
 
-A Pilha é uma estrutura de dados linear e estática (nesta implementação), que segue rigorosamente o princípio:
+## 🪙 2. Regra de ouro da recursão
 
-*LIFO — Last In, First Out*
-**(O último a entrar é o primeiro a sair)**
+> **Cada chamada recursiva empilha uma nova execução na memória.  
+Nada é resolvido até o caso base ser atingido.**
 
-Características principais: <br>
-⚫ Inserção e remoção ocorrem somente em uma extremidade <br>
-⚫ Essa extremidade é chamada de topo <br>
-⚫ Não há acesso direto a elementos intermediários <br>
-⚫ Toda operação acontece no topo <br>
+A execução acontece em duas fases:
 
-Exemplo conceitual:
-```text
-Base
-[10]
-[20]
-[30]  ← Topo
-````
-
-![pilha lógica ](../assets/pilhalogica.jpeg)
-
-# 🧠 ONDE OS DADOS DA PILHA FICAM NA MEMÓRIA (JAVA)
-### 1️⃣ Regras de memória aplicáveis
-
-> - Arrays criados com "new" ficam no HEAP
-> - Variáveis primitivas e referências ficam na STACK
-> - O array armazena valores, não referências (neste caso short)
-
-### 2️⃣ Estado inicial da pilha
-
-Ao criar a pilha:
-```java
-Pilha minhaPilha = new Pilha((short) 5);
-````
-⚫ Um array de tamanho fixo é criado <br>
-⚫ Nenhum valor está logicamente presente <br>
-⚫ O topo indica nenhum elemento <br>
-
-### 3️⃣ Conceito-chave
-
-> A pilha não cresce nem encolhe na memória
-> Ela cresce e encolhe logicamente, através do índice "topo"
-
-## 🧱 Estrutura interna da pilha
-
-```java
-private short[] pilha; // Array que armazena os valores
-private short topo;    // Índice do último elemento válido
-````
-
-## ➕ Empilhar (push)
-```java
-public void empilhar(short valor) {
-
-    if (cheia()) {
-        System.out.println("Pilha cheia");
-        return;
-    }
-    topo++;
-    pilha[topo] = valor;
-}
-````
-Execução passo a passo <br>
-
-- Verifica se a pilha está cheia <br>
-- Incrementa o índice topo <br>
-- Armazena o valor no array <br>
-
-```java
-empilhar(10);
-empilhar(20);
-````
-
-Estado da memória:
-
-```text
-pilha = [10, 20, ?, ?, ?]
-topo  = 1
-````
-
-## 👁️ Ver topo (peek)
-
-```java
-public void verTopo() {
-
-    if (vazia()) {
-        System.out.println("Pilha vazia");
-    } else {
-        System.out.println("Topo da pilha: " + pilha[topo]);
-    }
-}
-
-````
-Execução passo a passo <br>
-
-- Apenas consulta <br>
-- Não altera a estrutura <br>
-- Retorna o valor mais recente inserido <br>
-
-## ➖ Ignorar topo (pop lógico)
-
-```java
-public void ignorarTopo() {  
-
-    if (vazia()) {
-        System.out.println("Pilha vazia");
-        return;
-    }
-
-    short valor = pilha[topo];
-    topo--;
-    System.out.println("Valor desempilhado: " + valor);
-}
-
-
-````
-Conceito fundamental:
-
-> O valor não é apagado do array
-> Ele apenas deixa de ser considerado parte da pilha
-
-## 🧠 ESQUEMA VISUAL
-
-Estado inicial
-
-```text
-pilha = [ ?, ?, ?, ?, ? ]
-topo  = -1
-````
-
-empilhar(10)
-empilhar(20)
-
-```text
-pilha = [10, 20, ?, ?, ?]
-topo  = 1
-````
-
-ignorarTopo()
-
-```text
-pilha = [10, 20, ?, ?, ?]
-topo  = 0
-````
-⚠️ O 20 ainda existe no array, mas está inacessível pela pilha.
+1. **Descida (empilhamento)**  
+2. **Subida (desempilhamento / retorno dos valores)**
 
 ---
 
+## ❗ Exemplo 1 – Fatorial
 
-### 📌 Características finais da pilha
+```java
+public static int fatorial(int n) {
 
-- Estrutura LIFO <br>
-- Inserção e remoção em tempo O(1) <br>
-- Implementação simples <br>
-- Uso de memória contínua (array) <br>
-- Não permite acesso direto a elementos internos <br>
-- Controle lógico feito apenas pelo índice topo <br>
+    if (n == 0 || n == 1) {
+        return 1;
+    }
 
-### 🔗 Relação com outras estruturas
+    return n * fatorial(n - 1);
+}
+````
 
-- A pilha é base direta para: <br>
-- Chamadas de função (call stack) <br>
-- Undo / Redo <br>
-- Avaliação de expressões <br>
-- Backtracking <br>
-- Algoritmos de busca (DFS) <br>
-- Parsers e compiladores <br>
+Leitura correta da função: <br>
 
+Se n for 0 ou 1 → resposta imediata <br>
+Caso contrário → guarda n e delega o resto para fatorial(n - 1) <br>
+
+```text
+fatorial(5)
+= 5 * fatorial(4)
+= 5 * (4 * fatorial(3))
+= 5 * (4 * (3 * fatorial(2)))
+= 5 * (4 * (3 * (2 * fatorial(1))))
+= 5 * 4 * 3 * 2 * 1
+= 120
+````
+### 📌 Nada multiplica até chegar em fatorial(1).
+
+## 🔢 Exemplo 2 – Soma dos N primeiros inteiros
+
+```java
+public static int fatorial(int n) {
+
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+
+    return n * fatorial(n - 1);
+}
+````
+```text
+soma(5)
+= 5 + soma(4)
+= 5 + (4 + soma(3))
+= 5 + (4 + (3 + soma(2)))
+= 5 + (4 + (3 + (2 + soma(1))))
+= 5 + 4 + 3 + 2 + 1
+= 15
+````
+
+## :feelsgood: Exemplo 3 – Fibonacci
+
+```java
+public static int fibonacci(int num) {
+
+    if (num <= 1) {
+        return num;
+    }
+
+    return fibonacci(num - 1) + fibonacci(num - 2);
+}
+````
+Leitura conceitual : <br>
+Cada termo é a soma dos dois anteriores <br>
+A função se divide em duas chamadas <br>
+
+```text
+fibonacci(5)
+
+fibonacci(5) = fibonacci(4) + fibonacci(3)
+Nada é somado ainda. Tudo fica pendente.
+
+fibonacci(4) = fibonacci(3) + fibonacci(2)
+
+Substituindo na expressão original:
+fibonacci(5) =
+    (fibonacci(3) + fibonacci(2)) + fibonacci(3)
+
+
+fibonacci(3) = fibonacci(2) + fibonacci(1)
+
+Substituindo na expressão original:
+fibonacci(5) =
+    ((fibonacci(2) + fibonacci(1)) + fibonacci(2)) + fibonacci(3)
+
+
+fibonacci(2) = fibonacci(1) + fibonacci(0)
+
+Substituindo tudo:
+
+fibonacci(5) =
+    (((fibonacci(1) + fibonacci(0)) + fibonacci(1)) +
+      (fibonacci(1) + fibonacci(0))) +
+      fibonacci(3)
+
+Até aqui, nenhuma soma aconteceu.
+Só empilhamento.
+
+Agora entram os retornos imediatos:
+fibonacci(1) -> 1
+fibonacci(0) -> 0
+
+Substituindo:
+fibonacci(5) =
+    (((1 + 0) + 1) + (1 + 0)) + fibonacci(3)
+
+Resolver o fibonacci(3) da direita
+Lembre que ele é outro, não o mesmo já calculado.
+
+fibonacci(3) =
+    fibonacci(2) + fibonacci(1)
+
+Expandindo novamente:
+fibonacci(2) =
+    fibonacci(1) + fibonacci(0)
+
+Chega nos casos base:
+fibonacci(1) -> 1
+fibonacci(0) -> 0
+
+Logo:
+fibonacci(3) = (1 + 0) + 1 = 2
+
+
+Agora tudo pode subir !
+Voltando para a expressão principal:
+
+fibonacci(5) =
+    (((1 + 0) + 1) + (1 + 0)) + 2
+
+(1 + 0) = 1
+(1 + 0) = 1
+
+((1 + 1) + 1) + 2
+(2 + 1) + 2
+3 + 2
+5
+
+fibonacci(5) = 5
+
+
+O ponto CRÍTICO (onde a galera se perde)
+
+fibonacci(3) Foi calculado DUAS VEZES E fibonacci(2) foi calculado TRÊS VEZES.
+Isso acontece porque:
+  - Cada chamada cria uma subárvore inteira
+  - A função não lembra resultados anteriores
+
+f(5)
+├── f(4)
+│   ├── f(3)
+│   │   ├── f(2)
+│   │   │   ├── f(1)
+│   │   │   └── f(0)
+│   │   └── f(1)
+│   └── f(2)
+│       ├── f(1)
+│       └── f(0)
+└── f(3)
+    ├── f(2)
+    │   ├── f(1)
+    │   └── f(0)
+    └── f(1)
+````
+
+### Frase para fixar
+
+## Recursão não executa de cima para baixo.
+## Ela empilha de cima para baixo e resolve de baixo para cima.
