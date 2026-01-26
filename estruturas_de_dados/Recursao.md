@@ -262,7 +262,7 @@ private void imprimirArvoreRec(No no, int nivel) {
 
 imprimirArvoreRec(50, 0)
 
-omo no != null, não retorna.
+como no != null, não retorna.
 Ela vira:
 Nada imprime ainda. Tudo fica pendente.
 
