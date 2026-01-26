@@ -216,9 +216,35 @@ f(5)
 
 ---
 
+## Como NÃO se perder em recursão
+
+Checklist mental ao ler uma função recursiva <br>
+
+ ⚫ Onde está o caso base? <br>
+ ⚫ O problema está ficando menor a cada chamada? <br>
+ ⚫ O que a função retorna ao subir da pilha? <br>
+ ⚫ O valor é usado antes ou depois da chamada recursiva? <br>
+
+Se você responder essas quatro, você entende a função. <br>
+
+---
+
+## 🌲Conexão com árvores (BST)
+Em árvores: <br>
+
+- Cada nó chama recursivamente seus filhos <br>
+- O caso base é no == null <br>
+- A pilha representa o caminho percorrido na árvore <br>
+
+---
+
 ## Comparação: Recursão vs Iteração
 
-| Coluna 1 | Coluna 2 | Coluna 3 |
+| Aspecto | Recursão | Iteração   |
 | :--- | :---: | ---: |
-| Alinhado à esquerda | Centralizado | Alinhado à direita |
-| Dados 1 | Dados 2 | Dados 3 |
+| Legibilidade | Alta (conceitual)| Média |
+| Uso de memória | Maior (pilha) | Menor |
+| Controle de fluxo | Implícito | Explícito |
+| Risco | StackOverflow | Loop infinito |
+
+
