@@ -37,19 +37,19 @@ public class BubbleSort {
 
         int[] dados = LeitorArquivo.carregarArray("algoritmos_ordenacao/numeros_100k.txt");
 
-        System.out.println("Antes da ordenação:");
-
 
         long inicio = System.nanoTime();
         bubbleSort(dados);
         long fim = System.nanoTime();
         long duracao = fim - inicio;
         double tempoMs = duracao / 1_000_000.0;
+        double tempoS = duracao / 1_000_000_000.0;
         System.out.println("Tempo de execução (ms): " + tempoMs);
+        System.out.println("Tempo de execução (s): " + tempoS);
 
 
-        System.out.println("Depois da ordenação:");
-        System.out.println(Arrays.toString(dados));
+       // System.out.println("Depois da ordenação:");
+      //  System.out.println(Arrays.toString(dados));
 
     }
 }
