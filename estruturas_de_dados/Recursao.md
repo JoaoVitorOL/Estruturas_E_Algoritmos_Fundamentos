@@ -211,8 +211,8 @@ f(5)
 
 ### Frase para fixar
 
-## Recursão não executa de cima para baixo.
-## Ela empilha de cima para baixo e resolve de baixo para cima.
+Recursão não executa de cima para baixo. <br>
+Ela empilha de cima para baixo e resolve de baixo para cima. <br>
 
 ---
 
@@ -235,6 +235,102 @@ Em árvores: <br>
 - Cada nó chama recursivamente seus filhos <br>
 - O caso base é no == null <br>
 - A pilha representa o caminho percorrido na árvore <br>
+
+````java
+private void imprimirArvoreRec(No no, int nivel) {
+
+    if (no == null) {
+        return;
+    }
+
+    imprimirArvoreRec(no.getDireita(), nivel + 1);
+
+    printIndentacao(nivel);
+    System.out.println(no.getValor());
+
+    imprimirArvoreRec(no.getEsquerda(), nivel + 1);
+}
+````
+
+````text
+        50
+      /    \
+    30      70
+   /  \    /  \
+ 20   40  60  80
+
+
+imprimirArvoreRec(50, 0)
+
+omo no != null, não retorna.
+Ela vira:
+Nada imprime ainda. Tudo fica pendente.
+
+imprimirArvoreRec(70, 1)
+→ imprimirArvoreRec(80, 2)
+→ imprimirArvoreRec(null, 3) → retorna
+
+Agora sim começa a subir.
+
+Voltando para: 
+imprimirArvoreRec(80, 2)
+
+Fluxo:
+direita → null (retorna)
+IMPRIME 80
+esquerda → null (retorna)
+
+
+Voltando para:
+imprimirArvoreRec(70, 1)
+
+Fluxo:
+direita já resolvida
+IMPRIME 70
+esquerda → imprimirArvoreRec(60, 2)
+
+Saída:
+        80
+    70
+        60
+
+
+Voltamos para:
+imprimirArvoreRec(50, 0)
+
+Fluxo:
+direita resolvida
+IMPRIME 50
+esquerda → imprimirArvoreRec(30, 1)
+
+Saída parcial:
+        80
+    70
+        60
+50
+
+
+Lado esquerdo repete o MESMO padrão
+imprimirArvoreRec(30, 1)
+→ imprimirArvoreRec(40, 2)
+→ imprimirArvoreRec(20, 2)
+
+
+Resultado final:
+
+        80
+    70
+        60
+50
+        40
+    30
+        20
+
+Árvore deitada
+
+````
+
+
 
 ---
 
