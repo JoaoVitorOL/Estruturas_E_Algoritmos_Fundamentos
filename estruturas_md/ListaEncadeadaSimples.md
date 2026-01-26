@@ -1,0 +1,379 @@
+# 📦 Lista Encadeada Simples (PT-BR)
+![Construção da lista](../assets/encadeadaconstruir.png)
+
+## 🎯 Função principal
+
+
+A **Lista Encadeada Simples** é uma estrutura de dados linear e dinâmica, utilizada para armazenar elementos de forma **sequencial sem uso de posições fixas de memória**, diferentemente de vetores (arrays).
+
+Ela é composta por nós e **cada nó conhece apenas o próximo nó da sequência**.
+**Não existe conhecimento global da estrutura**. A lista é formada exclusivamente por ligações entre nós.
+
+> Uma lista encadeada é, conceitualmente, uma cadeia de referências, não um bloco contínuo de memória.
+
+**Não existe** acesso direto por **índice**.
+Para alcançar um elemento intermediário, é obrigatório **percorrer a lista nó a nó**, seguindo as referências até o destino.
+
+<img width="300" height="216" alt="image" src="https://github.com/user-attachments/assets/f67cb3fd-c202-4959-a572-9b23a59b0ef3" />
+
+---
+
+## 🧠 ONDE OS DADOS DE UMA LISTA ENCADEADA FICAM NA MEMÓRIA (JAVA)
+
+> 1. Regra fundamental de memória em Java
+> - Objetos criados com 'new' ficam no HEAP
+> - Variáveis locais e referências ficam na STACK
+> - Variáveis de tipo objeto armazenam REFERÊNCIAS, não o objeto em si.
+
+> 2. Estado inicial do programa: 
+> A lista contém apenas uma referência para o primeiro nó.
+
+> 3. Inserção de nós
+> Cada 'new No(valor)' cria um objeto separado no heap.
+> A lista aponta apenas para o primeiro.
+
+> 4. Encadeamento: 
+> Os nós se conectam por referências (proximo/anterior).
+> Não existe armazenamento sequencial.
+
+> 5. Exclusão: 
+> Excluir remove referências, não objetos imediatamente.
+> O Garbage Collector limpa depois.
+
+> 6. Conceito-chave
+> Lista encadeada é uma estrutura lógica baseada em referências.
+
+---
+
+## 🧱 Estrutura básica da lista
+
+### 🔹 Nó (Node)
+
+Um **nó** é a menor unidade da lista encadeada. Ele encapsula:
+
+- **valor** → dado armazenado
+- **próximo** → referência para o próximo nó da lista
+
+Representação conceitual:
+
+```text
+[ valor | próximo ]
+````
+Aspectos técnicos importantes:
+  1. Valor representa informação. <br>
+  2. "Próximo" representa uma ligação estrutural, não um dado. <br>
+
+O último nó da lista sempre possui:
+proximo == null , indicando o fim da lista.
+
+# 🧠 Conceito central: posição × relacionamento
+### Vetor (array) 
+
+⚫ Cada elemento ocupa uma posição fixa na memória. <br>
+⚫ O acesso é feito por índice. <br>
+⚫ Existe acesso direto <br>
+
+```text
+arr[0] arr[1] arr[2]
+````
+### Lista Encadeada
+
+⚫ Os elementos não possuem posição fixa. <br>
+⚫ Cada nó conhece apenas o próximo. <br>
+⚫ O acesso ocorre por relacionamento entre nós. <br>
+
+```text
+primeiro → nó1 → nó2 → nó3 → null
+````
+
+Consequência direta:
+Para acessar o 3º elemento, é necessário passar pelo 1º e pelo 2º
+
+# 🗣️ Cabeça da lista (head)
+A lista mantém uma referência especial:
+
+```java
+private No primeiro;
+````
+
+Funções dessa referência: <br>
+⚫ Apontar para o primeiro nó da lista. <br>
+⚫ Servir como ponto de entrada para todas as operações. <br>
+
+Observações importantes: <br>
+⚫ "primeiro" não é um nó. <br>
+⚫ É apenas uma referência externa mantida pela estrutura da lista. <br>
+⚫ Sem ela, a lista se torna inacessível <br>
+
+### ⚙️ Operações fundamentais
+A lista encadeada simples implementa as seguintes operações: <br>
+⚫ Inserir no início <br>
+⚫ Excluir do início <br>
+⚫ Mostrar lista <br>
+⚫ Pesquisar valor <br>
+⚫ Excluir em qualquer posição <br>
+⚠️ Nenhuma operação usa índice.
+
+# ➕ Inserir no início
+
+![Inserir Início](../assets/encadeadainseririnicio.png)
+
+### Objetivo
+⚫ Adicionar um novo nó como primeiro elemento da lista. <br>
+
+### Procedimento lógico
+1. Criar um novo nó.  <br>
+2. Fazer o novo nó apontar para o antigo primeiro nó.  <br>
+3. Atualizar o head da lista para o novo nó. <br>
+
+```text
+novo → antigoPrimeiro
+primeiro → novo
+````
+
+Complexidade: 
+O(1), Independe do tamanho da lista.
+
+# ➖ Excluir do início
+![Excluir Início](../assets/encadeadaexcluirinicio.png)
+
+### Objetivo
+⚫ Remover o primeiro nó da lista. <br>
+
+## Procedimento lógico
+
+1  Guardar o nó atualmente apontado por primeiro. <br>
+2. Fazer "primeiro" apontar para o segundo nó. <br>
+3. Retornar o nó removido. <br>
+
+# Observação técnica
+O nó "removido", apenas perde sua ligação com a lista.
+
+# 🔍 Mostrar lista
+![mostrar lista](../assets/listaencadeada.png)
+
+### Funcionamento
+
+1. Começa pelo nó apontado por "primeiro". <br>
+2. Percorre a lista utilizando "proximo". <br>
+3. Encerra ao encontrar null. <br>
+
+```text
+atual = primeiro
+while (atual != null)
+````
+Complexidade: 
+O(n), onde n é o número de nós da lista
+
+# 🔎 Pesquisar valor
+
+### Funcionamento
+
+1. Percorre a lista sequencialmente <br>
+2. Compara o valor de cada nó <br>
+
+### Finaliza quando:
+o valor é encontrado, ou o final da lista é alcançado (null)
+
+Observação importante
+⚫ Não existe atalho. <br>
+⚫ Mesmo listas ordenadas exigem percurso sequencial. <br>
+
+# ❌ Excluir em qualquer posição
+
+![Excluir qualquer](../assets/encadeadaposicaoqualquer.png)
+
+## Objetivo
+Remover um nó específico com base no valor.
+
+### Necessidade adicional
+
+São necessárias duas referências:
+
+atual → nó sendo analisado <br>
+anterior → nó imediatamente anterior <br>
+
+
+### Procedimento lógico
+
+1. Localizar o nó desejado. <br>
+2. Fazer o nó anterior apontar para o próximo do nó removido. <br>
+
+```text
+anterior → atual → proximo
+
+vira
+
+anterior → proximo
+
+````
+---
+
+# 👀 ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA)
+
+
+ESQUEMA VISUAL — LISTA ENCADEADA SIMPLES NA MEMÓRIA (JAVA) <br>
+========================================================  <br>
+
+1) CRIAÇÃO DA LISTA <br>
+------------------ <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► referência 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro = null <br>
+} <br>
+
+-------------------------------------------------------- <br>
+
+2) lista.inserirInicio((short) 10) <br>
+--------------------------------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x200 <br>
+}
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+}
+
+-------------------------------------------------------- <br>
+
+3) lista.inserirInicio((short) 20) <br>
+--------------------------------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x300 <br>
+} <br>
+
+0x300 → No { <br>
+    valor   = 20 <br>
+    proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+} <br>
+
+-------------------------------------------------------- <br>
+
+4) lista.inserirInicio((short) 30) <br>
+--------------------------------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x400 <br>
+} <br>
+
+0x400 → No { <br>
+    valor   = 30 <br>
+    proximo ───────► 0x300 <br>
+} <br>
+
+0x300 → No { <br>
+    valor   = 20 <br>
+    proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+} <br>
+
+-------------------------------------------------------- <br>
+
+5) lista.excluirInicio() <br>
+----------------------- <br>
+
+ANTES: <br>
+------ <br>
+primeiro ─► 0x400 → 30 → 20 → 10 → null <br>
+
+DEPOIS: <br>
+------- <br>
+
+Stack: <br>
+------ <br>
+lista  ───────────────► 0x100 <br>
+
+Heap: <br>
+----- <br>
+0x100 → ListaEncadeadaSimples { <br>
+    primeiro ───────► 0x300 <br>
+} <br>
+
+0x400 → No { <br>
+    valor   = 30 <br>
+    proximo = null   (NÓ DESCONECTADO) <br>
+}
+
+0x300 → No { <br>
+    valor   = 20 <br>
+    proximo ───────► 0x200 <br>
+} <br>
+
+0x200 → No { <br>
+    valor   = 10 <br>
+    proximo = null <br>
+} <br>
+
+OBS: <br>
+---- <br>
+O nó 0x400 não está mais ligado à lista. <br>
+Se não existir nenhuma outra referência para ele, <br>
+o Garbage Collector poderá removê-lo futuramente. <br>
+
+-------------------------------------------------------- <br>
+
+6) CONCEITO-CHAVE <br>
+----------------- <br>
+- A lista NÃO contém os nós fisicamente. <br>
+- A lista contém APENAS uma referência para o primeiro nó. <br>
+- Cada nó aponta para o próximo. <br>
+- A estrutura da lista é formada exclusivamente por referências. <br>
+
+
+
+
+---
+
+#  📌 Características finais da lista encadeada simples
+
+⚫ Estrutura dinâmica <br>
+⚫ Uso intensivo de referências <br>
+⚫ Inserções e remoções eficientes no início <br>
+⚫ Percurso sempre sequencial <br>
+⚫ Não utiliza índices <br>
+
+A lista encadeada simples é a base conceitual para:
+
+⚫ Listas duplamente encadeadas <br>
+⚫ Pilhas <br>
+⚫ Filas <br>
+⚫ Árvores <br>
+⚫ Grafos <br>
+
+
