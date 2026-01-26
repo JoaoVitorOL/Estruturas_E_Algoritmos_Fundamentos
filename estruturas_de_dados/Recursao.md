@@ -43,6 +43,7 @@ public static int fatorial(int n) {
 
     return n * fatorial(n - 1);
 }
+
 ````
 
 Leitura correta da função: <br>
@@ -60,6 +61,8 @@ fatorial(5)
 = 120
 ````
 ### 📌 Nada multiplica até chegar em fatorial(1).
+
+---
 
 ## 🔢 Exemplo 2 – Soma dos N primeiros inteiros
 
@@ -82,8 +85,16 @@ soma(5)
 = 5 + 4 + 3 + 2 + 1
 = 15
 ````
+---
 
-## :feelsgood: Exemplo 3 – Fibonacci
+## 🤓 Exemplo 3 – Fibonacci
+
+⚠️ Problema do Fibonacci recursivo <br>
+
+- Recalcula os mesmos valores várias vezes <br>
+- Crescimento exponencial de chamadas <br>
+
+Ótimo exemplo didático, péssimo em performance <br>
 
 ```java
 public static int fibonacci(int num) {
@@ -202,3 +213,12 @@ f(5)
 
 ## Recursão não executa de cima para baixo.
 ## Ela empilha de cima para baixo e resolve de baixo para cima.
+
+---
+
+## Comparação: Recursão vs Iteração
+
+| Coluna 1 | Coluna 2 | Coluna 3 |
+| :--- | :---: | ---: |
+| Alinhado à esquerda | Centralizado | Alinhado à direita |
+| Dados 1 | Dados 2 | Dados 3 |
