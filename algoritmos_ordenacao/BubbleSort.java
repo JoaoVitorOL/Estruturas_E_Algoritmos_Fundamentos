@@ -51,5 +51,7 @@ public class BubbleSort {
        // System.out.println("Depois da ordenação:");
       //  System.out.println(Arrays.toString(dados));
 
+        // Tempo médio:
+
     }
 }
