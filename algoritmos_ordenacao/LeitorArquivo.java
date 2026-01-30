@@ -1,5 +1,7 @@
 package algoritmos_ordenacao;
 
+//FileReader acessa o arquivo.
+//BufferedReader torna isso eficiente e legível.
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -71,4 +73,5 @@ public class LeitorArquivo {
         return array;
     }
 }
+
 
