@@ -220,8 +220,8 @@ O que acontece
  ```text
 [1, 2, 3, 4, 5]
 ````
-O que acontece no **nosso** caso:
-
-- Nenhuma troca ocorre
-- Já está ordenado kk
+O que acontece:
+- Algoritmo faz a primeira volta inteira
+- Percebe que nenhuma troca ocorreu
+- encerra com um Break
 
