@@ -168,6 +168,10 @@ Dividindo por 2:
 
 ````
 
+Sendo assim, **o Big O do Bubble Sort cresce quadraticamente**.
+
 ---
+
+# 👁️ Visualização do algoritmo
 
 [Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting)
