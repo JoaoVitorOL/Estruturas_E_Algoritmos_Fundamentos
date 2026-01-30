@@ -1,4 +1,4 @@
-# 🫧 Bubble Sort (Ordenação por Bolha) | (PT-BR)
+# 🫧 Bubble Sort (Ordenação por Bolha) O(n²) | (PT-BR)
 
 <img width="612" height="612" alt="image" src="https://github.com/user-attachments/assets/d85a8c3d-6ac7-4f50-903b-b6fcd3b9a9fd" />
 
@@ -168,7 +168,7 @@ Dividindo por 2:
 
 ````
 
-Sendo assim, **o Big O do Bubble Sort cresce quadraticamente**.
+Sendo assim, **o Big O do Bubble Sort cresce quadraticamente** O(n²) .
 
 ---
 
