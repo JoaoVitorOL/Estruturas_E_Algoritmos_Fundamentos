@@ -1,8 +1,5 @@
 # 🫧 Bubble Sort (Ordenação por Bolha) O(n²) | (PT-BR)
 
-![GIF Animado](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
-
-
 <img width="612" height="612" alt="image" src="https://github.com/user-attachments/assets/d85a8c3d-6ac7-4f50-903b-b6fcd3b9a9fd" />
 
 ### 1. O problema da ordenação
@@ -32,6 +29,9 @@ Resumindo: <br>
 À medida que o algoritmo avança: <br>
 os maiores valores “sobem” para o final | topo <br>
 como uma bolha subindo na água. <br>
+
+![GIF Animado](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
+
 
 ---
 
