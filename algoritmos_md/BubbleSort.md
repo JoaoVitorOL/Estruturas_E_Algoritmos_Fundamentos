@@ -163,7 +163,9 @@ Essa soma é conhecida matematicamente como:
 
 n(n - 1) / 2
 
-(A divisão por 2 aparece porque o total de comparações do Bubble Sort forma uma progressão aritmética decrescente. Se você somar o primeiro termo com o último, o resultado será o mesmo que somar o segundo com o penúltimo, o terceiro com o antepenúltimo e assim por diante. Sendo assim, dividir por 2 remove a comparação duplicada do total.)
+A divisão por 2 surge porque o número total de comparações realizadas pelo Bubble Sort forma uma progressão aritmética decrescente.
+Ao somar essa sequência com ela mesma invertida, cada par de termos resulta no mesmo valor, o que duplica artificialmente a soma real.
+Dividir por 2 é necessário para corrigir essa duplicação algébrica e obter o número correto de comparações.
 
 ````
 
