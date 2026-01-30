@@ -5,6 +5,23 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+// FileReader
+// Classe de baixo nível
+// Lê caracteres diretamente do arquivo
+// Cada chamada:
+// acessa o sistema operacional
+// Problema:
+// Leitura lenta
+// Não possui readLine()
+// BufferedReader
+// Classe de alto nível
+// Envolve outro Reader
+// Lê blocos grandes de dados para a memória
+// Benefícios:
+// Muito mais rápido
+// Possui readLine()
+// Reduz chamadas ao sistema operacional
+
 public class LeitorArquivo {
 
     public static int[] carregarArray(String caminhoArquivo) {
@@ -54,3 +71,4 @@ public class LeitorArquivo {
         return array;
     }
 }
+
