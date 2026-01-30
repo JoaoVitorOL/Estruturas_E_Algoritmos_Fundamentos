@@ -8,6 +8,7 @@ public class BubbleSort {
     public static void bubbleSort(int[] array) {
 
         int tamanho = array.length;
+        long comparacoes = 0;
 
         // Controla o número de voltas pelo array
         for (int volta = 0; volta < tamanho - 1; volta++) {
@@ -16,6 +17,7 @@ public class BubbleSort {
             // Percorre o vetor comparando elementos adjacentes
             for (int indiceatual = 0; indiceatual < tamanho - 1 - volta; indiceatual++) {
 
+                comparacoes ++;
                 // Se estiver fora de ordem, troca
                 if (array[indiceatual] > array[indiceatual + 1]) {
 
@@ -25,6 +27,7 @@ public class BubbleSort {
                 }
             }
         }
+        System.out.println("Comparações: " + comparacoes);
 
 
     }
@@ -52,7 +55,8 @@ public class BubbleSort {
       //  System.out.println(Arrays.toString(dados));
 
         // Tempo médio: 15 segundos
+        // Comparações: 4999950000
+
 
     }
 }
-
