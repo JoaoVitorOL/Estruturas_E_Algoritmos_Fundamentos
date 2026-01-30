@@ -132,14 +132,19 @@ para volta de 0 até n-1:
 Isso já nos diz algo importante:
 > Cada elemento pode ser comparado com quase todos os outros.
 
-**Imagine n = 5**
+**Imagine n = 10**
 ````text
-Volta 0 → 4 comparações
-Volta 1 → 3 comparações
-Volta 2 → 2 comparações
-Volta 3 → 1 comparação
+Volta 0 → 9 comparações
+Volta 1 → 8 comparações
+Volta 2 → 7 comparações
+Volta 3 → 6 comparação
+Volta 4 → 5 comparação
+Volta 5 → 4 comparação
+Volta 6 → 3 comparação
+Volta 7 → 2 comparação
+Volta 8 → 1 comparação
 
-4 + 3 + 2 + 1 = 10
+9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45
 ````
 Agora generalizando para n elementos:
 ````text
