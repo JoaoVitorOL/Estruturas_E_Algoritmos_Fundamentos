@@ -1,5 +1,8 @@
 # 🫧 Bubble Sort (Ordenação por Bolha) O(n²) | (PT-BR)
 
+<img width="300" height="180" alt="image" src="https://github.com/user-attachments/assets/535ee30f-8d59-4e11-b11f-dfe22289e256" />
+
+
 <img width="612" height="612" alt="image" src="https://github.com/user-attachments/assets/d85a8c3d-6ac7-4f50-903b-b6fcd3b9a9fd" />
 
 ### 1. O problema da ordenação
