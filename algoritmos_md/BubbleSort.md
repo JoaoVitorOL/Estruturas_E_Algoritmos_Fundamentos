@@ -25,10 +25,10 @@ Ele funciona com uma regra única:
 > Como podemos observar, a tendência do algoritmo é:  Um único valor é pego como parâmetro em cada iteração sobre o array, quando este valor é maior que a maioria ele irá ser comparado várias vezes na mesma lista "subindo" até o topo do array.
 > É aí de onde vem o apelido de "Bolha"|"Bubble". É só mentalizar um valor grande subindo o máximo que ele consegue até a superfície.
 
-Resumindo:
-À medida que o algoritmo avança:
-os maiores valores “sobem” para o final | topo
-como uma bolha subindo na água.
+Resumindo: <br>
+À medida que o algoritmo avança: <br>
+os maiores valores “sobem” para o final | topo <br>
+como uma bolha subindo na água. <br>
 
 ---
 
@@ -62,14 +62,13 @@ public static void bubbleSort(int[] array) {
 for (int volta = 0; volta < tamanho - 1; volta++)
 ````
 Cada volta completa garante que:
-
 - um elemento atinge sua posição final
 
 Após a 1ª volta:
 
 - o maior elemento já está no final
 
-  Após a 2ª volta:
+Após a 2ª volta:
 
 - o segundo maior está fixo
 - E assim por diante
@@ -80,11 +79,11 @@ Por isso, não precisamos mais comparar o final do vetor.
 for (int indiceAtual = 0; indiceAtual < tamanho - 1 - volta; indiceAtual++)
 ````
 
-tamanho - 1
-evita acessar array[j + 1] fora do vetor
+(tamanho - 1) <br>
+evita acessar array[j + 1] fora do vetor <br>
 
-- volta
-ignora a parte já ordenada no final
+(- volta) <br>
+ignora a parte já ordenada no final <br>
 
 
 ````java
