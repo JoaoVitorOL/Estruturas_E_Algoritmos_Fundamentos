@@ -22,7 +22,7 @@ Ele funciona com uma regra única:
 > Compare dois elementos adjacentes.
 > Se o elemento a esquerda for maior que seu colega a direita, eles trocam de lugar.
 > Após isso, esse mesmo maior valor é comparado novamente com seu próximo colega da direita.
-> Como podemos observar, a tendência do algoritmo é:  Um único valor é pego como parâmetro em cada iteração sobre o array, quando este valor é maior que a maioria ele irá ser comparado várias vezes na mesma lista "subindo" até o topo do array.
+> Como podemos observar, a tendência do algoritmo é:  Em cada passada, vários valores são comparados, mas apenas o maior entre eles “borbulha” até sua posição final (superfícia|topo).
 > É aí de onde vem o apelido de "Bolha"|"Bubble". É só mentalizar um valor grande subindo o máximo que ele consegue até a superfície.
 
 Resumindo: <br>
@@ -62,7 +62,7 @@ public static void bubbleSort(int[] array) {
 for (int volta = 0; volta < tamanho - 1; volta++)
 ````
 Cada volta completa garante que:
-- um elemento atinge sua posição final
+- No mínimo, o maior elemento da parte não ordenada atinja sua posição final.
 
 Após a 1ª volta:
 
@@ -157,11 +157,13 @@ Agora generalizando para n elementos:
 ````text
 (n - 1) + (n - 2) + ... + 1
 
+(Representa o número total de comparações feitas pelo algoritmo)
+
 Essa soma é conhecida matematicamente como:
 
 n(n - 1) / 2
 
-(Representa todas as combinações possíveis. i + j e j + i . Ao dividir por 2, você filtra para mostrar apenas os casos de i + j )
+(A divisão por 2 aparece porque o total de comparações do Bubble Sort forma uma progressão aritmética decrescente. Pela fórmula da soma dessa progressão, o fator 1/2 surge naturalmente e não altera a ordem de crescimento do algoritmo.)
 
 ````
 De onde vem o n² / 2
@@ -174,7 +176,7 @@ Dividindo por 2:
 (n² - n) / 2
 
 ````
-A parte importante disso tudo é que a fórmula (n² - n) / 2 em que o algoritmo opera é quadratica ! <br>
+A parte importante disso tudo é que a fórmula (n² - n) / 2 tem n² como seu termo dominante ! <br>
 Sendo assim, **o Big O do Bubble Sort cresce quadraticamente** O(n²) . <br>
 
 ---
