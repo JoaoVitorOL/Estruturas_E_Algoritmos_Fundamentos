@@ -30,5 +30,103 @@ Resumindo:
 os maiores valores “sobem” para o final | topo
 como uma bolha subindo na água.
 
+---
+
+````java
+public static void bubbleSort(int[] array) {
+
+    int tamanho = array.length;
+
+    // Controla o número de voltas completas pelo array
+    for (int volta = 0; volta < tamanho - 1; volta++) {
+
+        // Percorre os elementos ainda não ordenados
+        for (int indiceAtual = 0; indiceAtual < tamanho - 1 - volta; indiceAtual++) {
+
+            // Comparação entre elementos vizinhos
+            if (array[indiceAtual] > array[indiceAtual + 1]) {
+
+                int temp = array[indiceAtual];
+                array[indiceAtual] = array[indiceAtual + 1];
+                array[indiceAtual + 1] = temp;
+            }
+        }
+    }
+}
+
+````
+
+## O que cada parte do algoritmo faz ?
+
+````java
+for (int volta = 0; volta < tamanho - 1; volta++)
+````
+Cada volta completa garante que:
+
+- um elemento atinge sua posição final
+
+Após a 1ª volta:
+
+- o maior elemento já está no final
+
+  Após a 2ª volta:
+
+- o segundo maior está fixo
+- E assim por diante
+
+Por isso, não precisamos mais comparar o final do vetor.
+
+````java
+for (int indiceAtual = 0; indiceAtual < tamanho - 1 - volta; indiceAtual++)
+````
+
+tamanho - 1
+evita acessar array[j + 1] fora do vetor
+
+- volta
+ignora a parte já ordenada no final
+
+
+````java
+if (array[indiceAtual] > array[indiceAtual + 1]) {
+    int temp = array[indiceAtual];
+    array[indiceAtual] = array[indiceAtual + 1];
+    array[indiceAtual + 1] = temp;
+}
+
+````
+
+- Compara dois vizinhos
+- Troca somente se necessário
+- Mantém o algoritmo estável (não troca iguais)
+
+---
+
+# Complexidade (Big-O)
+## O que é o Big O?
+Muitas pessoas confundem o Big O como um sinônimo de tempo. Mas, na verdade, o Big O mede **a quantidade de comparações** que o algoritmo realiza conforme o tamanho da entrada n aumenta.
+Ou seja, Big-O **não mede tempo em segundos**. Na realidade, **mede crescimento do número de operações**.
+O fato de demorar menos tempo para realizar o trabalho é decorrente da redução do número de comparações necessárias para organizar elementos.
+
+<img width="800" height="556" alt="image" src="https://github.com/user-attachments/assets/2ecca399-6b62-4a71-a0b3-b8f87c42f391" />
+
+Ignora:
+
+- velocidade do computador
+- linguagem
+- constantes pequenas
+
+Observa apenas **como o algoritmo escala**.
+
+Pergunta central:
+> Se n (tamanho do array) dobra, o trabalho dobra, quadruplica ou explode?
+
+---
+
+##  Big O do Bubble Sort
+
+
+
+---
 
 [Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting)
