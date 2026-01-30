@@ -32,6 +32,9 @@ como uma bolha subindo na água. <br>
 
 ![GIF Animado](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
+# 👁️ Visualização do algoritmo
+
+[Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting)
 
 ---
 
@@ -185,12 +188,6 @@ Dividindo por 2:
 ````
 A parte importante disso tudo é que a fórmula (n² - n) / 2 tem n² como seu termo dominante ! <br>
 Sendo assim, **o Big O do Bubble Sort cresce quadraticamente** O(n²) . <br>
-
----
-
-# 👁️ Visualização do algoritmo
-
-[Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting)
 
 ---
 
