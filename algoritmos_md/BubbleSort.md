@@ -31,4 +31,4 @@ os maiores valores “sobem” para o final | topo
 como uma bolha subindo na água.
 
 
-[Visualizar operação do algoritmo no Visualgo.net]([https://visualgo.net/en/sorting?slide=14](https://visualgo.net/en/sorting))
+[Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting)
