@@ -122,9 +122,46 @@ Pergunta central:
 
 ---
 
-##  Big O do Bubble Sort
+##  Big O do Bubble Sort O(n²)
 
+```text
+para volta de 0 até n-1:
+    para indice de 0 até n-1-volta:
+        compara
+````
+Isso já nos diz algo importante:
+> Cada elemento pode ser comparado com quase todos os outros.
 
+**Imagine n = 5**
+````text
+Volta 0 → 4 comparações
+Volta 1 → 3 comparações
+Volta 2 → 2 comparações
+Volta 3 → 1 comparação
+
+4 + 3 + 2 + 1 = 10
+````
+Agora generalizando para n elementos:
+````text
+(n - 1) + (n - 2) + ... + 1
+
+Essa soma é conhecida matematicamente como:
+
+n(n - 1) / 2
+
+(Representa todas as combinações possíveis. i + j e j + i . Ao dividir por 2, você filtra para mostrar apenas os casos de i + j )
+
+````
+De onde vem o n² / 2
+Vamos expandir:
+````text
+n(n - 1) = n² - n
+
+Dividindo por 2:
+
+(n² - n) / 2
+
+````
 
 ---
 
