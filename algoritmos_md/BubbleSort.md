@@ -109,6 +109,7 @@ O fato de demorar menos tempo para realizar o trabalho é decorrente da reduçã
 
 
 <img width="800" height="556" alt="image" src="https://github.com/user-attachments/assets/2ecca399-6b62-4a71-a0b3-b8f87c42f391" />
+[Big O Cheat Sheet](https://www.bigocheatsheet.com/)
 
 O Big O nos mostra a **tendência de crescimento**.
 > Se eu multiplicar n por 10, o custo cresce:
