@@ -1,6 +1,8 @@
 # 🫧 Bubble Sort (Ordenação por Bolha) O(n²) | (PT-BR)
 
-<img width="300" height="180" alt="image" src="https://github.com/user-attachments/assets/091c95ed-9671-43df-ae79-d734c2386b29" />
+https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
+
+<img width="300" height="180" alt="image" src="https://github.com/user-attachments/assets/9f4b1752-2662-4784-bc1a-5c2a814c6976" />
 
 
 <img width="612" height="612" alt="image" src="https://github.com/user-attachments/assets/d85a8c3d-6ac7-4f50-903b-b6fcd3b9a9fd" />
