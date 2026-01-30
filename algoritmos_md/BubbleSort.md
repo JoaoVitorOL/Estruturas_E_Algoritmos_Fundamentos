@@ -131,7 +131,7 @@ Pergunta central:
 
 ---
 
-##  Big O do Bubble Sort O(n²)
+#  Big O do Bubble Sort O(n²)
 
 ```text
 para volta de 0 até n-1:
@@ -188,3 +188,40 @@ Sendo assim, **o Big O do Bubble Sort cresce quadraticamente** O(n²) . <br>
 # 👁️ Visualização do algoritmo
 
 [Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting)
+
+---
+
+# Bubble Sort — Melhor, Médio e Pior Caso
+
+
+### 🔴 Pior caso — O(n²)
+O pior caso ocorre quando o vetor está totalmente em ordem inversa.
+```text
+[5, 4, 3, 2, 1]
+````
+O que acontece
+- Toda comparação resulta em troca
+- Cada elemento precisa “subir” várias posições
+- O número de comparações é máximo
+
+### 🟠 Caso médio — O(n²)
+O vetor está parcialmente desordenado, com elementos fora de posição de forma aleatória.
+```text
+[3, 1, 2, 4, 5]
+````
+O que acontece
+
+- Algumas comparações trocam
+- Outras não
+- Mas todas as comparações ainda acontecem
+
+### 🟢 Melhor caso — O(n)
+ O vetor já está totalmente ordenado.
+ ```text
+[1, 2, 3, 4, 5]
+````
+O que acontece no **nosso** caso:
+
+- Nenhuma troca ocorre
+- Já está ordenado kk
+
