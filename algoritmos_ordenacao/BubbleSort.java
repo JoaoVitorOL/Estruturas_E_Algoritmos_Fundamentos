@@ -13,6 +13,7 @@ public class BubbleSort {
         // Controla o número de voltas pelo array
         for (int volta = 0; volta < tamanho - 1; volta++) {
 
+            boolean trocou = false;
 
             // Percorre o vetor comparando elementos adjacentes
             for (int indiceatual = 0; indiceatual < tamanho - 1 - volta; indiceatual++) {
@@ -24,9 +25,15 @@ public class BubbleSort {
                     int temp = array[indiceatual];
                     array[indiceatual] = array[indiceatual + 1];
                     array[indiceatual + 1] = temp;
+
+                    trocou = true;
                 }
             }
+            // Nenhuma troca na volta inteira → vetor já ordenado
+            if (!trocou) {break;
+            }
         }
+        
         System.out.println("Comparações: " + comparacoes);
 
 
@@ -55,7 +62,6 @@ public class BubbleSort {
       //  System.out.println(Arrays.toString(dados));
 
         // Tempo médio: 15 segundos
-        // Comparações: 4999950000
 
 
     }
