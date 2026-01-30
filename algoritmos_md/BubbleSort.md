@@ -103,11 +103,18 @@ if (array[indiceAtual] > array[indiceAtual + 1]) {
 
 # Complexidade (Big-O)
 ## O que é o Big O?
-Muitas pessoas confundem o Big O como um sinônimo de tempo. Mas, na verdade, o Big O mede **a quantidade de comparações** que o algoritmo realiza conforme o tamanho da entrada n aumenta.
+Muitas pessoas confundem o Big O como um sinônimo de tempo. Mas, na verdade, o Big O mede **a quantidade de comparações|operações** que o algoritmo realiza conforme o tamanho da entrada n aumenta.
 Ou seja, Big-O **não mede tempo em segundos**. Na realidade, **mede crescimento do número de operações**.
 O fato de demorar menos tempo para realizar o trabalho é decorrente da redução do número de comparações necessárias para organizar elementos.
 
+
 <img width="800" height="556" alt="image" src="https://github.com/user-attachments/assets/2ecca399-6b62-4a71-a0b3-b8f87c42f391" />
+
+O Big O nos mostra a **tendência de crescimento**.
+> Se eu multiplicar n por 10, o custo cresce:
+- linearmente?
+- quadraticamente?
+- exponencialmente?
 
 Ignora:
 
@@ -167,8 +174,8 @@ Dividindo por 2:
 (n² - n) / 2
 
 ````
-
-Sendo assim, **o Big O do Bubble Sort cresce quadraticamente** O(n²) .
+A parte importante disso tudo é que a fórmula (n² - n) / 2 em que o algoritmo opera é quadratica ! <br>
+Sendo assim, **o Big O do Bubble Sort cresce quadraticamente** O(n²) . <br>
 
 ---
 
