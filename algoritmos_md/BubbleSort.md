@@ -24,3 +24,11 @@ Ele funciona com uma regra única:
 > Após isso, esse mesmo maior valor é comparado novamente com seu próximo colega da direita.
 > Como podemos observar, a tendência do algoritmo é:  Um único valor é pego como parâmetro em cada iteração sobre o array, quando este valor é maior que a maioria ele irá ser comparado várias vezes na mesma lista "subindo" até o topo do array.
 > É aí de onde vem o apelido de "Bolha"|"Bubble". É só mentalizar um valor grande subindo o máximo que ele consegue até a superfície.
+
+Resumindo:
+À medida que o algoritmo avança:
+os maiores valores “sobem” para o final | topo
+como uma bolha subindo na água.
+
+
+[Visualizar operação do algoritmo no Visualgo.net](https://visualgo.net/en/sorting?slide=10)
