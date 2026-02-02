@@ -62,7 +62,10 @@ public class BubbleSort {
       //  System.out.println(Arrays.toString(dados));
 
         // Tempo médio: 15 segundos
+        // Comparações: 4.999.835.040
+
 
 
     }
 }
+
