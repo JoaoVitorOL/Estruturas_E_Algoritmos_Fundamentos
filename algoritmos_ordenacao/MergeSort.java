@@ -7,6 +7,32 @@ public class MergeSort {
     private static long comparacoes = 0;
 
     public static void mergesort(int[] array) {
+        /*
+ [9,4,7,3,8,2,6,1]
+├── [9,4,7,3]
+│   ├── [9,4]
+│   │   ├── [9]
+│   │   └── [4]
+│   │   └── merge → [4,9]
+│   ├── [7,3]
+│   │   ├── [7]
+│   │   └── [3]
+│   │   └── merge → [3,7]
+│   └── merge → [3,4,7,9]
+├── [8,2,6,1]
+│   ├── [8,2]
+│   │   ├── [8]
+│   │   └── [2]
+│   │   └── merge → [2,8]
+│   ├── [6,1]
+│   │   ├── [6]
+│   │   └── [1]
+│   │   └── merge → [1,6]
+│   └── merge → [1,2,6,8]
+└── merge → [1,2,3,4,6,7,8,9]
+
+        */
+
         // =================================
         //        DIVISÃO DO ARRAY
         // =================================
@@ -63,7 +89,7 @@ public class MergeSort {
         }
 
         // =================================
-        //     ORDENAÇÃO FINAL
+        //     ORDENAÇÃO FINAL 
         // =================================
         // enquanto i < tamanho(esquerda)
         while (indiceesquerda < esquerda.length) {
@@ -87,7 +113,7 @@ public class MergeSort {
 
         int[] dados = LeitorArquivo.carregarArray("algoritmos_ordenacao/numeros_100k.txt");
 
-        
+
         long inicio = System.nanoTime();
         mergesort(dados);
         long fim = System.nanoTime();
