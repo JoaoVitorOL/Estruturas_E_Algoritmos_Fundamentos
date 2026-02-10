@@ -38,7 +38,7 @@ public class QuickSort {
     // =================================
     public static void quickSort(int[] vetor, int inicio, int fim) {
 
-        if (inicio < fim) {
+        if (inicio < fim) { // Condição de parada da recursão (Se o subarray tem 0 ou 1 elemento Ele já está ordenado A função retorna imediatamente)
 
             int posicao = particao(vetor, inicio, fim);
 
