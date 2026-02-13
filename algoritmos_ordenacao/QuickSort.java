@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class QuickSort {
     /*
-    [5,2,8,1,7,3,6,4]
+[5,2,8,1,7,3,6,4]
 └── pivô = 4
     ├── [2,1,3]
     │   └── pivô = 3
@@ -102,4 +102,5 @@ public class QuickSort {
         // Comparações: 1.984.094
     }
 }
+
 
