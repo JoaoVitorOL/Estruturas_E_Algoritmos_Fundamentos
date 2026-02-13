@@ -11,9 +11,9 @@ public class QuickSort {
     │       │   └── pivô = 1
     │       │       ├── []
     │       │       └── [2]
-    │       │       └── concat → [1,2]
+    │       │       └── Result → [1,2]
     │       └── []
-    │       └── concat → [1,2,3]
+    │       └──  Result → [1,2,3]
     └── [5,8,7,6]
         └── pivô = 6
             ├── [5]
@@ -21,10 +21,10 @@ public class QuickSort {
                 └── pivô = 7
                     ├── []
                     └── [8]
-                    └── concat → [7,8]
-            └── concat → [5,6,7,8]
+                    └──  Result → [7,8]
+            └──  Result → [5,6,7,8]
 
-└── concat final → [1,2,3,4,5,6,7,8]
+└──  Result final → [1,2,3,4,5,6,7,8]
 
 
 
@@ -102,5 +102,6 @@ public class QuickSort {
         // Comparações: 1.984.094
     }
 }
+
 
 
