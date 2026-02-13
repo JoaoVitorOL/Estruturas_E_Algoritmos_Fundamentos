@@ -2,6 +2,33 @@ package algoritmos_ordenacao;
 import java.util.Arrays;
 
 public class QuickSort {
+    /*
+    [5,2,8,1,7,3,6,4]
+└── pivô = 4
+    ├── [2,1,3]
+    │   └── pivô = 3
+    │       ├── [2,1]
+    │       │   └── pivô = 1
+    │       │       ├── []
+    │       │       └── [2]
+    │       │       └── concat → [1,2]
+    │       └── []
+    │       └── concat → [1,2,3]
+    └── [5,8,7,6]
+        └── pivô = 6
+            ├── [5]
+            └── [8,7]
+                └── pivô = 7
+                    ├── []
+                    └── [8]
+                    └── concat → [7,8]
+            └── concat → [5,6,7,8]
+
+└── concat final → [1,2,3,4,5,6,7,8]
+
+
+
+    */
 
     private static long comparacoes = 0;
 
@@ -75,3 +102,4 @@ public class QuickSort {
         // Comparações: 1.984.094
     }
 }
+
